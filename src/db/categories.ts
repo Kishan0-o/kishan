@@ -1,8 +1,5 @@
 export const categories = [
   "All",
-  "Talking Head",
+  "Long Videos",
   "Shorts",
-  "Promo",
-  "Documentary",
-  "Explainer",
 ];
