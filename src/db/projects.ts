@@ -101,7 +101,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
     client_feedback: "",
     video_link: "https://youtube.com/shorts/Qwwgg_qt5ew?si=tTSoTUnuVPdjpc7y",
     project_images: [],
-    category: ["Shorts", "Motion Graphics", "Explainer"],
+    category: ["Shorts", "Explainer"],
     duration: "2:44",
     software_used: ["After Effects"],
   },
