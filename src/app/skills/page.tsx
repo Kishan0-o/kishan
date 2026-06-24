@@ -17,15 +17,14 @@ import {
   Eye,
   Send,
   Star,
+  Briefcase,
+  Calendar,
+  Users,
+  Award,
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
-import {
-  specializations,
-  achievements,
-  workflow,
-} from "@/db/skills";
 
-// Array updated with your exact paths inside the /tools/ directory
+// Hardcoded technical skills pointing to your /tools/ directory
 const updatedVideoEditingSkills = [
   {
     name: "CapCut",
@@ -49,13 +48,73 @@ const updatedVideoEditingSkills = [
   }
 ];
 
+// Updated achievements array containing your requested "2+ Years Experience" milestone
+const localAchievements = [
+  {
+    title: "2+ Years Experience",
+    description: "Continuous dedication to professional editing workflows, pacing strategies, and content asset management.",
+    icon: Calendar,
+    color: "text-purple-500"
+  },
+  {
+    title: "50+ Projects Completed",
+    description: "Successfully delivered engaging short-form videos, retention hooks, and creative marketing content.",
+    icon: Briefcase,
+    color: "text-blue-500"
+  },
+  {
+    title: "Happy Clients",
+    description: "Built strong collaborative relationships by aligning closely with specific brand voices and objectives.",
+    icon: Users,
+    color: "text-emerald-500"
+  },
+  {
+    title: "Creative Integrity",
+    description: "Consistently delivering pristine execution spanning high-resolution assets and technical formatting benchmarks.",
+    icon: Award,
+    color: "text-amber-500"
+  }
+];
+
+// Specializations Fallback Data
+const localSpecializations = [
+  {
+    title: "Short-Form Content Creation",
+    icon: "📱",
+    description: "Optimized pacing structures engineered explicitly for high audience retention thresholds across Shorts and Reels platforms.",
+    skills: ["Subtitles", "Sound Design Hooks", "Jump Cuts", "CapCut Mastery"]
+  },
+  {
+    title: "Advanced Technical Editing",
+    icon: "🎬",
+    description: "Rigorous alignment of timeline architecture, audio syncing layers, and high-fidelity project structures.",
+    skills: ["Premiere Pro", "Audio Syncing", "Multi-cam Setups", "Asset Organization"]
+  },
+  {
+    title: "Color Grading & Scopes",
+    icon: "🎨",
+    description: "Analyzing precise lighting variables using video scopes to target exposure fixes, tone optimization, and stylistic grading profiles.",
+    skills: ["DaVinci Resolve", "Waveform Monitors", "LUT Integration", "Exposure Correction"]
+  }
+];
+
+// Workflow Fallback Data
+const localWorkflow = [
+  { step: "1", title: "Project Analysis", description: "Reviewing underlying core briefs, script hooks, and target audience style dynamics." },
+  { step: "2", title: "Content Review", description: "Filtering raw data clips to extract foundational timeline frameworks." },
+  { step: "3", title: "Rough Cut", description: "Mapping physical continuity pacing thresholds, focal edits, and primary structural layout." },
+  { step: "4", title: "Fine Tuning", description: "Incorporate frame-accurate dynamic typography elements, sound effect layering, and graphics." },
+  { step: "5", title: "Client Review", description: "Collaborating via preview loops to evaluate adjustments, feedback loops, and design polish." },
+  { step: "6", title: "Final Delivery", description: "Export processing tuned for destination codec configurations and optimal playback profiles." }
+];
+
 const iconMap = [
-  { icon: <FileSearch size={20} />, bg: "#0ea5e9" }, // Project Analysis
-  { icon: <Eye size={20} />, bg: "#a855f7" }, // Content Review
-  { icon: <ScissorsSquare size={20} />, bg: "#f97316" }, // Rough Cut
-  { icon: <Brush size={20} />, bg: "#10b981" }, // Fine Tuning
-  { icon: <BarChart3 size={20} />, bg: "#f43f5e" }, // Client Review
-  { icon: <Send size={20} />, bg: "#6366f1" }, // Final Delivery
+  { icon: <FileSearch size={20} />, bg: "#0ea5e9" }, 
+  { icon: <Eye size={20} />, bg: "#a855f7" }, 
+  { icon: <ScissorsSquare size={20} />, bg: "#f97316" }, 
+  { icon: <Brush size={20} />, bg: "#10b981" }, 
+  { icon: <BarChart3 size={20} />, bg: "#f43f5e" }, 
+  { icon: <Send size={20} />, bg: "#6366f1" }, 
 ];
 
 export default function SkillsPage() {
@@ -69,7 +128,6 @@ export default function SkillsPage() {
           transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
           className="text-center mb-24 relative"
         >
-          {/* Spotlight Effect behind title */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/15 blur-[100px] rounded-full pointer-events-none" />
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mt-0 md:mt-16 mb-6 text-white tracking-tight relative z-10">
@@ -136,7 +194,7 @@ export default function SkillsPage() {
             Specializations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specializations.map((spec, index) => (
+            {localSpecializations.map((spec, index) => (
               <m.div
                 key={spec.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -168,7 +226,7 @@ export default function SkillsPage() {
           </div>
         </m.div>
 
-        {/* Achievements */}
+        {/* Achievements Grid */}
         <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,7 +237,7 @@ export default function SkillsPage() {
             Achievements
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
+            {localAchievements.map((achievement, index) => (
               <m.div
                 key={achievement.title}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -216,7 +274,7 @@ export default function SkillsPage() {
 
           <GlassmorphismCard className="p-4 md:p-8">
             <VerticalTimeline animate={true} lineColor="#3b82f6">
-              {workflow.map((step, index) => (
+              {localWorkflow.map((step, index) => (
                 <VerticalTimelineElement
                   key={step.step}
                   className="vertical-timeline-element--work"
