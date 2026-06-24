@@ -51,7 +51,7 @@ export default function Hero() {
                         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.1 }}
                         className="block w-full bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm pb-2"
                     >
-                        CINEMATIC
+                        VIDEO
                     </m.span>
                     <m.span
                         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
