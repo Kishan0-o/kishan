@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { m, AnimatePresence } from "framer-motion";
-import { Menu, X, Youtube, Instagram, Linkedin, Twitter, Mail } from "lucide-react";
+import { m, AnimatePresence  } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { Clapperboard } from "./ui/Clapperboard";
 
 const navItems = [
@@ -12,34 +12,6 @@ const navItems = [
   { name: "About", href: "/about" },
   { name: "Skills", href: "/skills" },
   { name: "Contact", href: "/contact" },
-];
-
-const socialLinks = [
-  {
-    name: "YouTube",
-    href: "https://www.youtube.com/@vfxlyrical",
-    icon: Youtube,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/kishan0_o",
-    icon: Instagram,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/kishan--/",
-    icon: Linkedin,
-  },
-  {
-    name: "Twitter",
-    href: "https://x.com/kishan0_0",
-    icon: Twitter,
-  },
-  {
-    name: "Email",
-    href: "mailto:098kishan@gmail.com",
-    icon: Mail,
-  },
 ];
 
 export default function Navbar() {
@@ -60,29 +32,22 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-[100] flex justify-center transition-all duration-300 ${
-        scrolled ? "pt-4 pb-0" : "pt-5 pb-0"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[100] flex justify-center transition-all duration-300 ${scrolled ? "pt-4 pb-0" : "pt-5 pb-0"
+        }`}
     >
       <div
         className={`
           flex flex-col items-center
           px-6 sm:px-8 py-3
           transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)] border
-          ${
-            scrolled || isOpen
-              ? "w-[95%] max-w-5xl rounded-3xl backdrop-blur-xl md:backdrop-blur-3xl bg-white/5 border border-white/10 shadow-2xl"
-              : "w-full max-w-7xl bg-transparent border-transparent"
+          ${scrolled || isOpen
+            ? "w-[95%] max-w-5xl rounded-3xl backdrop-blur-xl md:backdrop-blur-3xl bg-white/5 border border-white/10 shadow-2xl"
+            : "w-full max-w-7xl bg-transparent border-transparent"
           }
-        `}
-      >
+        `}>
         <div className="w-full flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div
-              className={`p-2 rounded-lg transition-all duration-300 ${
-                scrolled ? "bg-white/5 group-hover:bg-blue-600" : "bg-white/10 group-hover:bg-blue-600"
-              }`}
-            >
+            <div className={`p-2 rounded-lg transition-all duration-300 ${scrolled ? "bg-white/5 group-hover:bg-blue-600" : "bg-white/10 group-hover:bg-blue-600"}`}>
               <Clapperboard />
             </div>
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-200 transition-colors">
@@ -133,7 +98,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Dropdown */}
+        {/* Mobile Navigation Dropdown - Unified Container */}
         <AnimatePresence>
           {isOpen && (
             <m.div
@@ -143,7 +108,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="w-full overflow-hidden md:hidden"
             >
-              <div className="pt-4 pb-4 space-y-2 flex flex-col border-b border-white/5">
+              <div className="pt-4 pb-2 space-y-2 flex flex-col">
                 {navItems.map((item, i) => (
                   <m.div
                     key={item.name}
@@ -154,41 +119,16 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                        pathname === item.href
-                          ? "text-white bg-blue-600/20 border border-blue-500/30"
-                          : "text-gray-400 hover:text-white hover:bg-white/5"
-                      }`}
+                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${pathname === item.href
+                        ? "text-white bg-blue-600/20 border border-blue-500/30"
+                        : "text-gray-400 hover:text-white hover:bg-white/5"
+                        }`}
                     >
                       {item.name}
                     </Link>
                   </m.div>
                 ))}
               </div>
-
-              {/* Added Social Links Array inside Dropdown */}
-              <m.div 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="pt-5 pb-3 flex items-center justify-center gap-6"
-              >
-                {socialLinks.map((link) => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 rounded-full bg-white/5 border border-white/5 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-                      aria-label={link.name}
-                    >
-                      <Icon size={18} />
-                    </a>
-                  );
-                })}
-              </m.div>
             </m.div>
           )}
         </AnimatePresence>
