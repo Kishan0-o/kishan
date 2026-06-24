@@ -51,7 +51,7 @@ export default function Navbar() {
               <Clapperboard />
             </div>
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-200 transition-colors">
-              itsNiloy
+              Kishan
             </span>
           </Link>
 
