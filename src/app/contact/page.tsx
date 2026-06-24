@@ -95,10 +95,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
-                      href="mailto:contact.niloybhowmick@gmail.com"
+                      href="mailto:098kishan@gmail.com"
                       className="text-white hover:text-blue-400 transition-colors"
                     >
-                      contact.niloybhowmick@gmail.com
+                      098kishan@gmail.com
                     </a>
                   </div>
                 </div>
@@ -110,12 +110,12 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-400 text-sm">WhatsApp</p>
                     <a
-                      href="https://wa.me/+8801580385556"
+                      href="https://wa.me/918092238125"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white hover:text-green-400 transition-colors"
                     >
-                      +88 (015) 803-85556
+                      +91 80922 38125
                     </a>
                   </div>
                 </div>
@@ -150,9 +150,9 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3">
                   <div className="bg-blue-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-medium text-white">Quick Turnaround</h4>
+                    <h4 className="font-medium text-white">High Retention & Hook Focus</h4>
                     <p className="text-gray-400 text-sm">
-                      Fast delivery without compromising quality
+                      Optimized pacing, crisp subtitles, and transitions designed to keep viewers locked in.
                     </p>
                   </div>
                 </div>
@@ -160,10 +160,10 @@ export default function ContactPage() {
                   <div className="bg-green-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="font-medium text-white">
-                      Professional Quality
+                      Data-Driven Ad Creatives
                     </h4>
                     <p className="text-gray-400 text-sm">
-                      Cinematic edits with attention to detail
+                      Engineered for high CTR on Meta platforms to maximize your return on ad spend.
                     </p>
                   </div>
                 </div>
@@ -171,10 +171,10 @@ export default function ContactPage() {
                   <div className="bg-purple-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="font-medium text-white">
-                      Clear Communication
+                      Seamless Workflow
                     </h4>
                     <p className="text-gray-400 text-sm">
-                      Regular updates and transparent process
+                      Clear communication, quick turnaround times, and clean asset management.
                     </p>
                   </div>
                 </div>
@@ -241,12 +241,11 @@ export default function ContactPage() {
                     className="w-full bg-white/[0.03] border border-white/10 text-white rounded-xl px-4 py-3 h-12 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500/50 transition-all custom-select"
                   >
                     <option value="" className="bg-gray-900 text-gray-400">Select project type</option>
-                    <option value="youtube" className="bg-gray-900">YouTube Video</option>
-                    <option value="social-media" className="bg-gray-900">Social Media Content</option>
+                    <option value="youtube" className="bg-gray-900">YouTube Video / Shorts</option>
+                    <option value="social-media" className="bg-gray-900">Instagram Reels / Short-form</option>
+                    <option value="meta-ads" className="bg-gray-900">Meta Ad Creatives</option>
                     <option value="promo" className="bg-gray-900">Promotional Video</option>
-                    <option value="tutorial" className="bg-gray-900">Tutorial/Course</option>
-                    <option value="documentary" className="bg-gray-900">Documentary</option>
-                    <option value="animation" className="bg-gray-900">Logo Animation</option>
+                    <option value="graphic-design" className="bg-gray-900">Graphic Design Asset</option>
                     <option value="other" className="bg-gray-900">Other</option>
                   </select>
                 </div>
@@ -279,7 +278,7 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={6}
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your brand, target audience, hooks, or reference styles..."
                     className="bg-white/[0.03] border-white/10 text-white placeholder:text-gray-500 rounded-xl focus-visible:ring-blue-500/30 focus-visible:border-blue-500/50 resize-none p-4"
                   />
                 </div>
@@ -298,10 +297,10 @@ export default function ContactPage() {
                 <p className="text-gray-400 text-sm text-center">
                   Prefer to chat directly? Reach out on{" "}
                   <a
-                    href="https://wa.me/+8801580385556"
+                    href="https://wa.me/918092238125"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-400 hover:text-green-300"
+                    className="text-green-400 hover:text-green-300 font-semibold"
                   >
                     WhatsApp
                   </a>{" "}
@@ -311,81 +310,6 @@ export default function ContactPage() {
             </GlassmorphismCard>
           </m.div>
         </div>
-
-        {/* FAQ Section */}
-        {/* <m.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-16"
-        >
-          <GlassmorphismCard className="p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-white text-center">
-              Frequently Asked Questions
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    How long does a typical project take?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Most projects are completed within 3-7 days, depending on
-                    complexity and length. Rush orders can be accommodated.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    What file formats do you work with?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I work with all major video formats including MP4, MOV, AVI,
-                    and more. I can deliver in any format you need.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Do you provide revisions?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Yes! I include multiple revisions in all packages to ensure
-                    you're completely satisfied with the final result.
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    What's your payment process?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I typically require 50% upfront and 50% upon completion.
-                    Payment can be made via PayPal, bank transfer, or other
-                    methods.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Can you work with my existing brand guidelines?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I can work with your brand colors, fonts, logos, and style
-                    guidelines to maintain consistency.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Do you offer ongoing video editing services?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Yes! I work with many clients on retainer for regular
-                    content creation. Let's discuss your ongoing needs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </GlassmorphismCard>
-        </m.div> */}
       </div>
     </div>
   );
