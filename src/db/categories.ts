@@ -4,6 +4,5 @@ export const categories = [
   "Shorts",
   "Promo",
   "Documentary",
-  "Motion Graphics",
   "Explainer",
 ];
