@@ -241,7 +241,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
     client_feedback: "",
     video_link: "https://youtu.be/Y3lWN7oFkpw",
     project_images: [],
-    category: ["Documentary"],
+    category: ["Videos"],
     duration: "3:51",
     software_used: ["After Effects"],
   },
