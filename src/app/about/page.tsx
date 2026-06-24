@@ -44,7 +44,7 @@ export default function AboutPage() {
               header={
                 <div className="relative w-full h-full min-h-[28rem] md:min-h-[16rem] rounded-xl overflow-hidden group-hover/bento:scale-[1.02] transition-transform duration-500">
                   <Image
-                    src="/Kishan.jpg"
+                    src="/Kishan.JPG"
                     alt="Kishan Kumar"
                     fill
                     className="object-cover object-top grayscale-[0] hover:grayscale-0 transition-all duration-500"
