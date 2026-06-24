@@ -3,26 +3,17 @@
 import { m } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import Marquee from "@/components/ui/marquee";
 import CTASection from "@/components/CTASection";
 import {
-  Facebook,
-  Github,
   Instagram,
   Linkedin,
   Youtube,
   MapPin,
-  Cpu,
-  Award,
   Clock,
-  Zap,
-  Quote
+  Zap
 } from "lucide-react";
-import { clientsData } from "@/db/clients";
 
 export default function AboutPage() {
-
-
   return (
     <div className="min-h-screen flex flex-col justify-center pt-32 pb-12 md:py-24 px-4">
       <div className="max-w-7xl mx-auto w-full">
@@ -40,7 +31,7 @@ export default function AboutPage() {
         </m.div>
 
         <BentoGrid className="max-w-6xl mx-auto mb-20">
-          {/* 1. Hero Profile - SUPER HIGHLIGHTED */}
+          {/* 1. Hero Profile */}
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +45,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full min-h-[28rem] md:min-h-[16rem] rounded-xl overflow-hidden group-hover/bento:scale-[1.02] transition-transform duration-500">
                   <Image
                     src="/niloybhowmick.png"
-                    alt="Niloy"
+                    alt="Kishan Kumar"
                     fill
                     className="object-cover object-top grayscale-[0] hover:grayscale-0 transition-all duration-500"
                   />
@@ -68,8 +59,8 @@ export default function AboutPage() {
                       transition={{ delay: 0.2 }}
                       className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter"
                     >
-                      NILOY<br />
-                      <span className="text-blue-500">BHOWMICK</span>
+                      KISHAN<br />
+                      <span className="text-blue-500">KUMAR</span>
                     </m.div>
                     <div className="h-1 w-16 md:w-20 bg-purple-500 mt-4 rounded-full" />
                     <p className="text-gray-300 mt-4 text-xs md:text-sm font-medium tracking-wide uppercase">
@@ -79,11 +70,11 @@ export default function AboutPage() {
                 </div>
               }
               className="h-full shadow-2xl shadow-blue-900/10"
-              icon={null} // Icon inside header
+              icon={null}
             />
           </m.div>
 
-          {/* 2. Stats - Experience - VISUAL */}
+          {/* 2. Stats - Experience */}
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,7 +87,7 @@ export default function AboutPage() {
               header={
                 <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-black to-neutral-900 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden group-hover:border-emerald-500/30 transition-colors py-8 md:py-0">
                   <div className="absolute inset-0 bg-emerald-500/5 blur-3xl rounded-full" />
-                  <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-emerald-400 to-emerald-900 z-10">5+</span>
+                  <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-emerald-400 to-emerald-900 z-10">2+</span>
                   <div className="text-emerald-500/50 text-xs font-mono uppercase tracking-[0.2em] z-10 mt-2">Years Active</div>
                 </div>
               }
@@ -105,9 +96,7 @@ export default function AboutPage() {
             />
           </m.div>
 
-
-
-          {/* 4. Global Reach - Visual Map */}
+          {/* 3. Global Reach */}
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,8 +107,7 @@ export default function AboutPage() {
               title="Global Reach"
               description="Remote ready."
               header={
-                <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-[#0a0a0a] overflow-hidden flex items-center justify-center border border-white/5">
-                  {/* Abstract grid lines for map feel */}
+                <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-black overflow-hidden flex items-center justify-center border border-white/5">
                   <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
                   <div className="relative z-10 flex flex-col items-center">
@@ -137,88 +125,28 @@ export default function AboutPage() {
             />
           </m.div>
 
-          {/* 5. The Philosophy - Quote */}
+          {/* 4. Socials */}
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="md:col-span-2"
-          >
-            <BentoGridItem
-              title="Philosophy"
-              description="Story is King."
-              header={
-                <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-black border border-white/5 p-6 flex items-center">
-                  <Quote className="text-white/10 absolute top-4 right-4" size={48} />
-                  <p className="text-gray-300 italic text-sm md:text-base leading-relaxed relative z-10">
-                    "I don't just cut footage; I construct feelings. Every frame must earn its place on the timeline, serving the narrative above all else."
-                  </p>
-                </div>
-              }
-              className="h-full"
-              icon={<Award className="h-4 w-4 text-yellow-500" />}
-            />
-          </m.div>
-
-          {/* 6. Socials - Visual Bar */}
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
             className="md:col-span-1"
           >
             <BentoGridItem
               title="Connect"
-              description=""
+              description="Let's stay in touch."
               header={
                 <div className="flex flex-1 h-full w-full items-center justify-between px-6 bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-xl border border-white/5 py-4 md:py-0 min-h-[5rem]">
-                  <a href="https://linkedin.com/in/niloy-bhowmick" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-[#0077b5] hover:scale-110 transition-all duration-300 text-white"><Linkedin size={20} /></a>
-                  <a href="https://instagram.com/its.niloybhowmick" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-pink-600 hover:scale-110 transition-all duration-300 text-white"><Instagram size={20} /></a>
-                  <a href="https://youtube.com/@itsniloybhowmick" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-red-600 hover:scale-110 transition-all duration-300 text-white"><Youtube size={20} /></a>
+                  <a href="https://www.linkedin.com/in/kishan--/" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-[#0077b5] hover:scale-110 transition-all duration-300 text-white"><Linkedin size={20} /></a>
+                  <a href="https://www.instagram.com/kishan0_o" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-pink-600 hover:scale-110 transition-all duration-300 text-white"><Instagram size={20} /></a>
+                  <a href="https://www.youtube.com/@vfxlyrical" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-red-600 hover:scale-110 transition-all duration-300 text-white"><Youtube size={20} /></a>
                 </div>
               }
               className="h-full"
               icon={<Zap className="h-4 w-4 text-white" />}
             />
           </m.div>
-
         </BentoGrid>
-
-        {/* Clients Section */}
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-20"
-        >
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Trusted By</h2>
-            <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full" />
-          </div>
-
-          <div
-            className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-10"
-            style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
-          >
-            <Marquee className="[--duration:20s]">
-              {clientsData.map((client) => (
-                <div key={client.id} className="mx-8 flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-50 hover:opacity-100 cursor-pointer">
-                  <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white/5 p-4 flex items-center justify-center shadow-sm hover:shadow-md hover:bg-white/10 transition-all">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <p className="mt-3 text-xs font-medium text-gray-400 group-hover:text-gray-200 transition-colors text-center whitespace-nowrap">
-                    {client.name}
-                  </p>
-                </div>
-              ))}
-            </Marquee>
-          </div>
-        </m.div>
 
         <CTASection
           title="Ready to Work Together?"
