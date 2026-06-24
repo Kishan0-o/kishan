@@ -2,24 +2,20 @@ import { VideoProject } from "@/types/videos";
 
 export const allVideoProjects: VideoProject[] = [
   {
-    id: "rVVeLdouViU",
-    video_title: "हर रात 4 Erections | Science क्या कहती है?",
-    video_description: `Morning Erections क्यों आते हैं? — REM Sleep का सच
-
-Hard Facts with Kundan Bhoot | Raaz MD
-
-#MorningErections #MensHealth #HardFacts`,
-    tags: ["Resume Tips", "FAANG Career", "Job Preparation", "Career Advice"],
-    cover_image: "rVVeLdouViU",
+    id: "WPpFZ5OMINQ",
+    video_title: "Your YouTube Video Title Here",
+    video_description: `Your video description goes here. You can add your context, tags, and notes inside this block.`,
+    tags: ["Tag1", "Tag2", "Tag3", "Shorts"],
+    cover_image: "WPpFZ5OMINQ",
     publish_date: "2024-08-04",
     client_name: "Stack Learner",
     client_image: "/companies/sl-logo.png",
     client_feedback: "",
-    video_link: "https://youtube.com/shorts/WPpFZ5OMINQ?si=7aS8EoDY38QohNID",
+    video_link: "https://youtube.com/shorts/WPpFZ5OMINQ?si=xt4dTVQe141Htt35",
     project_images: [],
-    category: [],
-    duration: "6:32",
-    software_used: ["DaVinci Resolve"],
+    category: ["Shorts"],
+    duration: "1:00",
+    software_used: ["CapCut"],
   },
   {
     id: "JSZmQxg3fos",
@@ -142,8 +138,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
   {
     id: "fH24XyxcfOc",
     video_title: "Granola to Nutritionist - Short 01",
-    video_description:
-      "",
+    video_description: "",
     tags: ["API", "Granola", "Ecofaming", "Shorts"],
     cover_image: "fH24XyxcfOc",
     publish_date: "2025-03-06",
@@ -159,8 +154,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
   {
     id: "wBrkYeMlh1U",
     video_title: "Granola to Nutritionist - Short 02",
-    video_description:
-      "",
+    video_description: "",
     tags: ["API", "Granola", "Ecofaming", "Shorts"],
     cover_image: "wBrkYeMlh1U",
     publish_date: "2025-03-06",
@@ -176,8 +170,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
   {
     id: "A7O_MV3mgsI",
     video_title: "Granola to Nutritionist - Short 03",
-    video_description:
-      "",
+    video_description: "",
     tags: ["API", "Granola", "Ecofaming", "Shorts"],
     cover_image: "A7O_MV3mgsI",
     publish_date: "2025-03-07",
@@ -324,7 +317,7 @@ Hard Facts with Kundan Bhoot | Raaz MD
   {
     id: "byQmrdAwFK8",
     video_title: "Digital Marketing",
-    video_description: `ভিজিটর আসছে, কিন্তু কাস্টমার হচ্ছে না? সমস্যা প্রোডাক্টে না, মার্কেটিং সিস্টেমে।`,
+    video_description: `ভিজিটর আসছে, কিন্তু কাস্টমার হচ্ছে না? সমস্যা প্রোডাক্টে না, मार्केटिंग সিস্টেমে।`,
     tags: [
       "Marketing Strategy",
       "Conversion Optimization",
