@@ -21,11 +21,11 @@ import {
 import CTASection from "@/components/CTASection";
 import {
   specializations,
-  achievements,
+  achievements, // Fallback if needed, though overridden below
   workflow,
 } from "@/db/skills";
 
-// Array updated with your exact paths inside the /tools/ directory
+// Technical stack data array
 const updatedVideoEditingSkills = [
   {
     name: "CapCut",
@@ -49,7 +49,7 @@ const updatedVideoEditingSkills = [
   }
 ];
 
-// Appended Prompt Engineering to your existing specializations
+// Specializations list
 const updatedSpecializations = [
   ...specializations,
   {
@@ -59,6 +59,25 @@ const updatedSpecializations = [
     skills: ["Midjourney", "Stable Diffusion", "GPT-4 / Claude", "Asset Generation", "Creative Workflows"]
   }
 ];
+
+// Dynamically mapped or updated achievements array swapping 3+ with 2+ years experience
+const updatedAchievements = achievements.map((achievement) => {
+  if (achievement.title.includes("3+ Years") || achievement.description.includes("3+ Years")) {
+    return {
+      ...achievement,
+      title: achievement.title.replace("3+", "2+"),
+      description: achievement.description.replace("3+", "2+")
+    };
+  }
+  // Hardcoded fallback replacement inline just in case the string key layout matches exactly
+  if (achievement.title === "3+ Years Experience") {
+    return {
+      ...achievement,
+      title: "2+ Years Experience"
+    };
+  }
+  return achievement;
+});
 
 const iconMap = [
   { icon: <FileSearch size={20} />, bg: "#0ea5e9" }, // Project Analysis
@@ -192,7 +211,7 @@ export default function SkillsPage() {
             Achievements
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
+            {updatedAchievements.map((achievement, index) => (
               <m.div
                 key={achievement.title}
                 initial={{ opacity: 0, scale: 0.9 }}
