@@ -291,7 +291,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "EwpM2r4MLWk",
-    video_title: "Penis टेढ़ा दिखता है? 56% मर्द ग़लत समझते हैं",
+    video_title: "Penis टेढ़ा दिखता है? 56% मर्द ग़লत समझते हैं",
     video_description: "Discussing how looking downward creates an unflattering perspective angle, causing more than half of men to overestimate asymmetry.",
     tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
     cover_image: "EwpM2r4MLWk",
@@ -347,7 +347,7 @@ export const allVideoProjects: VideoProject[] = [
     client_name: "RaazMD",
     client_image: "/companies/RaazMD.png",
     client_feedback: "",
-    video_link: "https://facebook.com/ads/library",
+    video_link: "https://drive.google.com/file/d/1RtZZTpYdxewGMQKobFfI6kFqx-WaSytd/view?usp=sharing",
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:00",
