@@ -20,11 +20,34 @@ import {
 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import {
-  videoEditingSkills,
   specializations,
   achievements,
   workflow,
 } from "@/db/skills";
+
+// Inlined & updated skills data array exactly how you ordered it
+const updatedVideoEditingSkills = [
+  {
+    name: "CapCut",
+    image_link: "/skills/capcut.png", 
+    description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
+  },
+  {
+    name: "Adobe Premiere Pro",
+    image_link: "/skills/premiere.png",
+    description: "Advanced timeline organization, video editing, audio synchronization, and technical color grading using video scopes to maintain perfect exposure, contrast, and professional look consistency."
+  },
+  {
+    name: "Adobe Photoshop",
+    image_link: "/skills/photoshop.png", 
+    description: "Essential tool for digital asset creation. Crafting high-converting thumbnails, extracting clean image assets, design layout manipulation, and creating eye-catching visual elements for Meta ad graphics."
+  },
+  {
+    name: "DaVinci Resolve",
+    image_link: "/skills/davinci.png", 
+    description: "Industry-standard node-based color grading and correction. Used for refining visual tones, managing color accurate spaces, fixing crushed or clipped levels, and delivering cinematic image quality."
+  }
+];
 
 const iconMap = [
   { icon: <FileSearch size={20} />, bg: "#0ea5e9" }, // Project Analysis
@@ -72,7 +95,7 @@ export default function SkillsPage() {
             Technical Skills
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {videoEditingSkills.map((skill, index) => (
+            {updatedVideoEditingSkills.map((skill, index) => (
               <m.div
                 key={skill.name}
                 initial={{ opacity: 0, x: -20 }}
@@ -181,41 +204,6 @@ export default function SkillsPage() {
         </m.div>
 
         {/* Workflow */}
-        {/* <m.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-          className="mb-20"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white text-center">
-            My Workflow
-          </h2>
-          <div className="space-y-6">
-            {workflow.map((step, index) => (
-              <m.div
-                key={step.step}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-              >
-                <GlassmorphismCard className="p-6">
-                  <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">{step.step}</span>
-                    </div>
-                    <div className="flex-grow">
-                      <h3 className="text-lg font-semibold mb-2 text-white">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-400">{step.description}</p>
-                    </div>
-                  </div>
-                </GlassmorphismCard>
-              </m.div>
-            ))}
-          </div>
-        </m.div> */}
-
         <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
