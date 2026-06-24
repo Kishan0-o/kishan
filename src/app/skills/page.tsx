@@ -25,26 +25,26 @@ import {
   workflow,
 } from "@/db/skills";
 
-// Inlined & updated skills data array exactly how you ordered it
+// Array updated with your exact paths inside the /tools/ directory
 const updatedVideoEditingSkills = [
   {
     name: "CapCut",
-    image_link: "/skills/capcut.png", 
+    image_link: "/tools/capcut.png", 
     description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
   },
   {
     name: "Adobe Premiere Pro",
-    image_link: "/skills/premiere.png",
+    image_link: "/tools/Adobe_Premiere_Pro_CC.png",
     description: "Advanced timeline organization, video editing, audio synchronization, and technical color grading using video scopes to maintain perfect exposure, contrast, and professional look consistency."
   },
   {
     name: "Adobe Photoshop",
-    image_link: "/skills/photoshop.png", 
+    image_link: "/tools/Adobe_Photoshop_CC.png", 
     description: "Essential tool for digital asset creation. Crafting high-converting thumbnails, extracting clean image assets, design layout manipulation, and creating eye-catching visual elements for Meta ad graphics."
   },
   {
     name: "DaVinci Resolve",
-    image_link: "/skills/davinci.png", 
+    image_link: "/tools/DaVinci_Resolve_Studio.png", 
     description: "Industry-standard node-based color grading and correction. Used for refining visual tones, managing color accurate spaces, fixing crushed or clipped levels, and delivering cinematic image quality."
   }
 ];
@@ -203,7 +203,7 @@ export default function SkillsPage() {
           </div>
         </m.div>
 
-        {/* Workflow */}
+        {/* My Workflow */}
         <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
