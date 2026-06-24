@@ -23,7 +23,7 @@ export default function AboutPage() {
           className="text-center mb-8"
         >
           <h1 className="text-4xl md:text-6xl font-bold mt-0 md:mt-20 mb-3 text-white tracking-tight">
-            The Man Behind the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Magic</span>
+            Behind the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Timeline</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Visual Storyteller. Motion Graphics Artist. Problem Solver.
