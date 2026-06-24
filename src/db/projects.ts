@@ -3,15 +3,19 @@ import { VideoProject } from "@/types/videos";
 export const allVideoProjects: VideoProject[] = [
   {
     id: "rVVeLdouViU",
-    video_title: "একজন ফেসবুক ইঞ্জিনিয়ারের রিজিউমি কেমন হয়?",
-    video_description: `How to Build Your Perfect Resume: Learn from a FAANG Employee Example! Are you ready to take your career to new heights and secure your dream job at a top tech company? Join us on this exclusive journey inside the mind of a FAANG employee as we unveil the secrets of their perfect resume! In this eye-opening video, you'll discover the exact strategies and tips used by the industry's finest to stand out from the crowd and impress recruiters.`,
+    video_title: "हर रात 4 Erections | Science क्या कहती है?",
+    video_description: `Morning Erections क्यों आते हैं? — REM Sleep का सच
+
+Hard Facts with Kundan Bhoot | Raaz MD
+
+#MorningErections #MensHealth #HardFacts`,
     tags: ["Resume Tips", "FAANG Career", "Job Preparation", "Career Advice"],
     cover_image: "rVVeLdouViU",
     publish_date: "2024-08-04",
     client_name: "Stack Learner",
     client_image: "/companies/sl-logo.png",
     client_feedback: "",
-    video_link: "https://youtu.be/rVVeLdouViU?si=LwWPmI4F34mwLNw8",
+    video_link: "https://youtube.com/shorts/WPpFZ5OMINQ?si=7aS8EoDY38QohNID",
     project_images: [],
     category: ["Talking Head", "Explainer"],
     duration: "6:32",
