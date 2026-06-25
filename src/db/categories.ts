@@ -1,6 +1,6 @@
 export const categories = [
-  "All",
-  "Long Videos",
+  "Featured",
   "Shorts",
   "Meta Ads",
+  "All",
 ];
