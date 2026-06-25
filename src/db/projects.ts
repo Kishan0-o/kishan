@@ -13,7 +13,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/T6kb4AUGGqg",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Shorts"], // Removed Featured
     duration: "0:35",
     software_used: ["CapCut"],
   },
@@ -237,7 +237,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/G5qRYKkRnWQ",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Shorts"], // Removed Featured
     duration: "0:51",
     software_used: ["CapCut"],
   },
@@ -349,7 +349,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/SmoWNatw9Bw",
     project_images: [],
-    category: ["Meta Ads"],
+    category: ["Meta Ads"], // Removed Featured
     duration: "0:33",
     software_used: ["CapCut"],
   },
@@ -381,7 +381,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/pAsejwdzgD8",
     project_images: [],
-    category: ["Meta Ads"],
+    category: ["Meta Ads"], // Removed Featured
     duration: "1:05",
     software_used: ["CapCut"],
   },
@@ -411,7 +411,7 @@ export const allVideoProjects: VideoProject[] = [
     client_name: "RaazMD",
     client_image: "/companies/RaazMD.png",
     client_feedback: "",
-    video_link: "https://youtube.com/shorts/hHTxV7x7JUY",
+    video_link: "https://youtube.com/shorts/hHTxV7x8JUY",
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:08",
@@ -429,7 +429,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/RRbF-eej7Ds",
     project_images: [],
-    category: ["Meta Ads"],
+    category: ["Meta Ads"], // Removed Featured
     duration: "1:16",
     software_used: ["CapCut"],
   },
@@ -477,7 +477,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/noYusL8aR1A",
     project_images: [],
-    category: ["Meta Ads"],
+    category: ["Meta Ads"], // Removed Featured
     duration: "1:05",
     software_used: ["CapCut"],
   },
