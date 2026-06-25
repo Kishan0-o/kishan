@@ -14,7 +14,7 @@ interface ProjectGridProps {
 }
 
 export default function ProjectGrid({ initialCategories, initialProjects }: ProjectGridProps) {
-  // 1. Sets "Shorts" as the default open page instead of Featured or All
+  // 1. Changed the initial state value to "Shorts" so it defaults cleanly on load
   const [selectedCategory, setSelectedCategory] = useState("Shorts");
   const [displayedProjects, setDisplayedProjects] = useState<VideoProject[]>(initialProjects.slice(0, 9));
   const [allProjects, setAllProjects] = useState<VideoProject[]>(initialProjects);
@@ -72,12 +72,12 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
     return () => window.removeEventListener("scroll", handleScroll);
   }, [selectedCategory, loadMoreProjects]);
 
-  // 2. Removed "Featured" completely from your array priority layout
+  // 2. Define your layout sequence without "Featured"
   const explicitOrder = ["Shorts", "Meta Ads", "All"];
 
-  // Sorts and filters the categories array to strictly match your explicitOrder
+  // Completely filter out "Featured" data points and map items cleanly
   const orderedCategories = [...initialCategories]
-    .filter(item => explicitOrder.includes(item.category)) // Ensures 'Featured' is physically excluded
+    .filter((item) => item.category !== "Featured")
     .sort((a, b) => {
       const orderA = explicitOrder.indexOf(a.category);
       const orderB = explicitOrder.indexOf(b.category);
