@@ -61,7 +61,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/5maln15Dfrk",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Featured", "Shorts"], // Added to Featured
     duration: "0:36",
     software_used: ["CapCut"],
   },
@@ -109,7 +109,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/qZtOwEOOVKM",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Featured", "Shorts"], // Added to Featured
     duration: "0:29",
     software_used: ["CapCut"],
   },
@@ -157,7 +157,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/CRxEa40onZ8",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Featured", "Shorts"], // Added to Featured
     duration: "0:57",
     software_used: ["CapCut"],
   },
@@ -173,7 +173,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/KIi-GNrS3Wo",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Featured", "Shorts"], // Added to Featured
     duration: "0:35",
     software_used: ["CapCut"],
   },
@@ -205,7 +205,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/9FybW5O9YlY",
     project_images: [],
-    category: ["Shorts"],
+    category: ["Featured", "Shorts"], // Added to Featured
     duration: "0:39",
     software_used: ["CapCut"],
   },
@@ -544,21 +544,5 @@ export const allVideoProjects: VideoProject[] = [
     category: ["Meta Ads"],
     duration: "1:02",
     software_used: ["CapCut"],
-  },
-  {
-    id: "featured-placeholder-id",
-    video_title: "Placeholder to keep Featured category button alive",
-    video_description: "This item ensures the UI button component renders safely even when empty.",
-    tags: [],
-    cover_image: "",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:00",
-    software_used: [],
   },
 ];
