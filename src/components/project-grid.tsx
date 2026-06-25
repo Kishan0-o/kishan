@@ -14,8 +14,8 @@ interface ProjectGridProps {
 }
 
 export default function ProjectGrid({ initialCategories, initialProjects }: ProjectGridProps) {
-  // 1. Set default starting tab on page load to "Featured"
-  const [selectedCategory, setSelectedCategory] = useState("Featured");
+  // 1. Sets "Shorts" as the default open page instead of Featured or All
+  const [selectedCategory, setSelectedCategory] = useState("Shorts");
   const [displayedProjects, setDisplayedProjects] = useState<VideoProject[]>(initialProjects.slice(0, 9));
   const [allProjects, setAllProjects] = useState<VideoProject[]>(initialProjects);
   const [currentPage, setCurrentPage] = useState(1);
@@ -72,15 +72,17 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
     return () => window.removeEventListener("scroll", handleScroll);
   }, [selectedCategory, loadMoreProjects]);
 
-  // 2. Define the exact sorting priority order
-  const explicitOrder = ["Featured", "Shorts", "Meta Ads", "All"];
+  // 2. Removed "Featured" completely from your array priority layout
+  const explicitOrder = ["Shorts", "Meta Ads", "All"];
 
-  // Sort the categories based on the priority order array
-  const orderedCategories = [...initialCategories].sort((a, b) => {
-    const orderA = explicitOrder.indexOf(a.category);
-    const orderB = explicitOrder.indexOf(b.category);
-    return (orderA !== -1 ? orderA : 99) - (orderB !== -1 ? orderB : 99);
-  });
+  // Sorts and filters the categories array to strictly match your explicitOrder
+  const orderedCategories = [...initialCategories]
+    .filter(item => explicitOrder.includes(item.category)) // Ensures 'Featured' is physically excluded
+    .sort((a, b) => {
+      const orderA = explicitOrder.indexOf(a.category);
+      const orderB = explicitOrder.indexOf(b.category);
+      return (orderA !== -1 ? orderA : 99) - (orderB !== -1 ? orderB : 99);
+    });
 
   return (
     <>
