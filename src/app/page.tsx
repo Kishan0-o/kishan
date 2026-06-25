@@ -10,23 +10,8 @@ import {
 
 export default function HomePage() {
   // Fetch data on the server
-  const rawCategories = getVideoCategoriesWithCountIncludingAll();
+  const categories = getVideoCategoriesWithCountIncludingAll();
   const allProjects = getAllVideoProjectsFlattened(); // We need all projects initially for the grid to filter client-side
-
-  // Define a strict priority map to sort the category objects explicitly
-  const categoryOrderMap: Record<string, number> = {
-    "Featured": 1,
-    "Shorts": 2,
-    "Meta Ads": 3,
-    "All": 4,
-  };
-
-  // Correctly sort the category objects by referencing `item.name`
-  const categories = [...rawCategories].sort((a, b) => {
-    const orderA = categoryOrderMap[a.name] || 99;
-    const orderB = categoryOrderMap[b.name] || 99;
-    return orderA - orderB;
-  });
 
   return (
     <div className="min-h-screen relative overflow-hidden">
