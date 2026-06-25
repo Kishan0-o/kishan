@@ -14,7 +14,8 @@ interface ProjectGridProps {
 }
 
 export default function ProjectGrid({ initialCategories, initialProjects }: ProjectGridProps) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  // 1. Set default starting tab on page load to "Featured"
+  const [selectedCategory, setSelectedCategory] = useState("Featured");
   const [displayedProjects, setDisplayedProjects] = useState<VideoProject[]>(initialProjects.slice(0, 9));
   const [allProjects, setAllProjects] = useState<VideoProject[]>(initialProjects);
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,6 +72,16 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
     return () => window.removeEventListener("scroll", handleScroll);
   }, [selectedCategory, loadMoreProjects]);
 
+  // 2. Define the exact sorting priority order
+  const explicitOrder = ["Featured", "Shorts", "Meta Ads", "All"];
+
+  // Sort the categories based on the priority order array
+  const orderedCategories = [...initialCategories].sort((a, b) => {
+    const orderA = explicitOrder.indexOf(a.category);
+    const orderB = explicitOrder.indexOf(b.category);
+    return (orderA !== -1 ? orderA : 99) - (orderB !== -1 ? orderB : 99);
+  });
+
   return (
     <>
         {/* Category Filter */}
@@ -80,7 +91,7 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-3 mb-16"
         >
-            {initialCategories.map(({ category, count }) => (
+            {orderedCategories.map(({ category, count }) => (
             <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
