@@ -13,7 +13,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/T6kb4AUGGqg",
     project_images: [],
-    category: ["Shorts"], // Removed Featured
+    category: ["Shorts"],
     duration: "0:35",
     software_used: ["CapCut"],
   },
@@ -237,7 +237,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/G5qRYKkRnWQ",
     project_images: [],
-    category: ["Shorts"], // Removed Featured
+    category: ["Shorts"],
     duration: "0:51",
     software_used: ["CapCut"],
   },
@@ -349,7 +349,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/SmoWNatw9Bw",
     project_images: [],
-    category: ["Meta Ads"], // Removed Featured
+    category: ["Meta Ads"],
     duration: "0:33",
     software_used: ["CapCut"],
   },
@@ -381,7 +381,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/pAsejwdzgD8",
     project_images: [],
-    category: ["Meta Ads"], // Removed Featured
+    category: ["Meta Ads"],
     duration: "1:05",
     software_used: ["CapCut"],
   },
@@ -429,14 +429,14 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/RRbF-eej7Ds",
     project_images: [],
-    category: ["Meta Ads"], // Removed Featured
+    category: ["Meta Ads"],
     duration: "1:16",
     software_used: ["CapCut"],
   },
   {
     id: "w1I7E0e6wlM",
     video_title: "\"शीघ्रपतन का इलाज किधर है?\" 🤔 | The Real Science Behind Men's Health",
-    video_description: "क्या आप भी टाइमिंग की दिक्कतों और शीघ्रपतन (Premature Ejaculation) से परेशान हैं, और इसका इलाज ढूंढने के लिए अजीबोगरिब नुस्के, चुरन बा जड़ि-बुटीओन के चक्कर मेन भैटक राहे ह्येन? 🛑...",
+    video_description: "क्या आप भी टाइमिंग की दिक्कतों और शीघ्रपतन (Premature Ejaculation) से परेशान हैं, और इसका इलाज ढूंढने के लिए अजीबोगरीब नुस्खे, चूरन या जड़ी-बूटियों के चक्कर में भटक रहे हैं? 🛑...",
     tags: ["Metaads"],
     cover_image: "w1I7E0e6wlM",
     publish_date: "2026-06-25",
@@ -477,7 +477,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://youtube.com/shorts/noYusL8aR1A",
     project_images: [],
-    category: ["Meta Ads"], // Removed Featured
+    category: ["Meta Ads"],
     duration: "1:05",
     software_used: ["CapCut"],
   },
@@ -544,5 +544,21 @@ export const allVideoProjects: VideoProject[] = [
     category: ["Meta Ads"],
     duration: "1:02",
     software_used: ["CapCut"],
+  },
+  {
+    id: "featured-placeholder-id",
+    video_title: "Placeholder to keep Featured category button alive",
+    video_description: "This item ensures the UI button component renders safely even when empty.",
+    tags: [],
+    cover_image: "",
+    publish_date: "2026-06-25",
+    client_name: "RaazMD",
+    client_image: "/companies/RaazMD.png",
+    client_feedback: "",
+    video_link: "",
+    project_images: [],
+    category: ["Featured"],
+    duration: "0:00",
+    software_used: [],
   },
 ];
