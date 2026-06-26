@@ -1,7 +1,6 @@
 "use client";
 
 import { m } from "framer-motion";
-import type { Transition } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import MagneticButton from "./magnetic-button";
 import { useLenis } from "lenis/react";
@@ -24,12 +23,9 @@ export default function Hero() {
         }
     };
 
-    const easeOut: Transition = { duration: 1, ease: "easeOut" as const, delay: 0.1 };
-    const easeOutSub: Transition = { duration: 1, ease: "easeOut" as const, delay: 0.3 };
-
     return (
         <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
-            {/* Background Ambience - Reduced blur on mobile for performance */}
+            {/* Background Ambience */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div className={`absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-blue-900/15 rounded-[100%] ${isMobile ? "blur-[60px]" : "blur-[120px] animate-pulse-slow"}`} />
                 {!isMobile && (
@@ -43,9 +39,9 @@ export default function Hero() {
             <div className="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto w-full">
                 {/* Badge */}
                 <m.div
-                    initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: isMobile ? 0.4 : 0.8, ease: "easeOut" }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                     className="inline-block mb-8 md:mb-10 w-full"
                 >
                     <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-xs sm:text-sm font-medium text-blue-300 tracking-[0.2em] shadow-[0_0_30px_rgba(59,130,246,0.15)] uppercase">
@@ -57,17 +53,17 @@ export default function Hero() {
                 {/* Main Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-8 leading-[0.9] w-full flex flex-col items-center">
                     <m.span
-                        initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 60, filter: "blur(10px)" }}
-                        animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={isMobile ? { duration: 0.4 } : easeOut}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                         className="block w-full bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm pb-2"
                     >
                         MOTION
                     </m.span>
                     <m.span
-                        initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 40, filter: "blur(10px)" }}
-                        animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={isMobile ? { duration: 0.4, delay: 0.1 } : easeOutSub}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                         className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 pb-4"
                     >
                         DESIGNER
@@ -76,9 +72,9 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <m.p
-                    initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: isMobile ? 0.4 : 0.8, delay: isMobile ? 0.2 : 0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-12 sm:mb-16 md:px-0"
                 >
                     Turning raw footage into visual stories — with style, precision, and a touch of{" "}
@@ -87,22 +83,21 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <m.div
-                    initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: isMobile ? 0.4 : 0.8, delay: isMobile ? 0.3 : 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md mx-auto sm:max-w-none"
                 >
                     {isMobile ? (
-                        // Plain buttons on mobile — no MagneticButton (requires mouse tracking)
                         <>
-                            <a
+                            
                                 href="#projects"
                                 onClick={scrollToProjects}
                                 className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 py-4 text-base sm:text-lg font-semibold text-black bg-white rounded-full transition-all duration-300 active:scale-95"
                             >
                                 View Work
                             </a>
-                            <a
+                            
                                 href="/contact"
                                 className="group inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 py-4 text-base sm:text-lg font-medium text-white bg-white/5 border border-white/10 rounded-full transition-all duration-300 active:scale-95"
                             >
@@ -112,7 +107,7 @@ export default function Hero() {
                     ) : (
                         <>
                             <MagneticButton>
-                                <a
+                                
                                     href="#projects"
                                     onClick={scrollToProjects}
                                     className="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 py-4 text-base sm:text-lg font-semibold text-black bg-white rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] cursor-pointer"
@@ -121,7 +116,7 @@ export default function Hero() {
                                 </a>
                             </MagneticButton>
                             <MagneticButton>
-                                <a
+                                
                                     href="/contact"
                                     className="group inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 py-4 text-base sm:text-lg font-medium text-white bg-white/5 border border-white/10 rounded-full backdrop-blur-2xl transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
                                 >
@@ -137,7 +132,7 @@ export default function Hero() {
             <m.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: isMobile ? 0.8 : 1.5, duration: isMobile ? 0.5 : 1.5 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
                 className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2"
             >
                 <button
