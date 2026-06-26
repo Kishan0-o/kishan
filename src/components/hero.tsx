@@ -1,6 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
+import type { Transition } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import MagneticButton from "./magnetic-button";
 import { useLenis } from "lenis/react";
@@ -23,14 +24,8 @@ export default function Hero() {
         }
     };
 
-    // Lighter animations on mobile
-    const titleAnimation = isMobile
-        ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.5 } }
-        : { initial: { opacity: 0, y: 60, filter: "blur(10px)" }, animate: { opacity: 1, y: 0, filter: "blur(0px)" }, transition: { duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.1 } };
-
-    const subtitleAnimation = isMobile
-        ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.4, delay: 0.2 } }
-        : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.6, ease: [0.25, 1, 0.5, 1] } };
+    const easeOut: Transition = { duration: 1, ease: "easeOut" as const, delay: 0.1 };
+    const easeOutSub: Transition = { duration: 1, ease: "easeOut" as const, delay: 0.3 };
 
     return (
         <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
@@ -50,7 +45,7 @@ export default function Hero() {
                 <m.div
                     initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: isMobile ? 0.4 : 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    transition={{ duration: isMobile ? 0.4 : 0.8, ease: "easeOut" }}
                     className="inline-block mb-8 md:mb-10 w-full"
                 >
                     <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-xs sm:text-sm font-medium text-blue-300 tracking-[0.2em] shadow-[0_0_30px_rgba(59,130,246,0.15)] uppercase">
@@ -62,7 +57,9 @@ export default function Hero() {
                 {/* Main Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-8 leading-[0.9] w-full flex flex-col items-center">
                     <m.span
-                        {...titleAnimation}
+                        initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 60, filter: "blur(10px)" }}
+                        animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={isMobile ? { duration: 0.4 } : easeOut}
                         className="block w-full bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm pb-2"
                     >
                         MOTION
@@ -70,7 +67,7 @@ export default function Hero() {
                     <m.span
                         initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 40, filter: "blur(10px)" }}
                         animate={isMobile ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={isMobile ? { duration: 0.4, delay: 0.1 } : { duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.3 }}
+                        transition={isMobile ? { duration: 0.4, delay: 0.1 } : easeOutSub}
                         className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 pb-4"
                     >
                         DESIGNER
@@ -79,7 +76,9 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <m.p
-                    {...subtitleAnimation}
+                    initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: isMobile ? 0.4 : 0.8, delay: isMobile ? 0.2 : 0.6, ease: "easeOut" }}
                     className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-12 sm:mb-16 md:px-0"
                 >
                     Turning raw footage into visual stories — with style, precision, and a touch of{" "}
@@ -90,7 +89,7 @@ export default function Hero() {
                 <m.div
                     initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: isMobile ? 0.4 : 0.8, delay: isMobile ? 0.3 : 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    transition={{ duration: isMobile ? 0.4 : 0.8, delay: isMobile ? 0.3 : 0.8, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md mx-auto sm:max-w-none"
                 >
                     {isMobile ? (
