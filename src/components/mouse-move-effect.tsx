@@ -2,17 +2,11 @@
 
 import { useEffect, useState, useRef } from "react";
 
-/**
- * Midnight Liquid Glass - Background Engine
- * Creates a dual-layer parallax gradient effect that reacts to mouse movement.
- * Layer 1: Neon Blue (Primary) - Follows closely
- * Layer 2: Neon Purple (Secondary) - Follows with lag/parallax
- */
 export default function MouseMoveEffect() {
   const requestRef = useRef<number>(0);
   const targetPos = useRef({ x: 0, y: 0 });
-  const currentPos1 = useRef({ x: 0, y: 0 }); // Layer 1 position
-  const currentPos2 = useRef({ x: 0, y: 0 }); // Layer 2 position
+  const currentPos1 = useRef({ x: 0, y: 0 });
+  const currentPos2 = useRef({ x: 0, y: 0 });
 
   const layer1Ref = useRef<HTMLDivElement>(null);
   const layer2Ref = useRef<HTMLDivElement>(null);
@@ -20,13 +14,11 @@ export default function MouseMoveEffect() {
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
-    // 1. Check if mobile/touch device
     const checkMobile = () => {
       const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
       setIsMobile(isTouch);
 
-      if (typeof window !== 'undefined') {
-        // Initialize center
+      if (typeof window !== "undefined") {
         const cx = window.innerWidth / 2;
         const cy = window.innerHeight / 2;
         targetPos.current = { x: cx, y: cy };
@@ -36,36 +28,27 @@ export default function MouseMoveEffect() {
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
-    // 2. Mouse Move Handler (Only adding if not mobile to save resources)
     const handleMouseMove = (event: MouseEvent) => {
-      targetPos.current = {
-        x: event.clientX,
-        y: event.clientY
-      };
+      targetPos.current = { x: event.clientX, y: event.clientY };
     };
 
     if (!isMobile) {
       window.addEventListener("mousemove", handleMouseMove);
     }
 
-    // 3. Animation Loop
     const animate = () => {
-      // Only animate if refs are available
       if (!layer1Ref.current || !layer2Ref.current) return;
 
-      // Smooth damping
       const ease1 = 0.08;
       const ease2 = 0.04;
 
       currentPos1.current.x += (targetPos.current.x - currentPos1.current.x) * ease1;
       currentPos1.current.y += (targetPos.current.y - currentPos1.current.y) * ease1;
-
       currentPos2.current.x += (targetPos.current.x - currentPos2.current.x) * ease2;
       currentPos2.current.y += (targetPos.current.y - currentPos2.current.y) * ease2;
 
-      // DIRECT DOM UPDATE (No React Re-renders)
       const p1 = currentPos1.current;
       const p2 = currentPos2.current;
 
@@ -80,43 +63,30 @@ export default function MouseMoveEffect() {
     }
 
     return () => {
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(requestRef.current);
     };
   }, [isMobile]);
 
-  // If mobile, render static gradient or nothing to save GPU
+  // On mobile: simple static gradient, NO animation, NO heavy blur
   if (isMobile) {
     return (
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-blue-900/10 blur-[80px] animate-pulse-slow" />
-        <div className="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] rounded-full bg-purple-900/10 blur-[80px] animate-pulse-slow delay-1000" />
+        <div className="absolute top-[-20%] left-[-20%] w-[70%] h-[70%] rounded-full bg-blue-900/8 blur-[60px]" />
+        <div className="absolute bottom-[-20%] right-[-20%] w-[70%] h-[70%] rounded-full bg-purple-900/8 blur-[60px]" />
       </div>
     );
   }
 
   return (
     <>
-      {/* Base Ambient Glow */}
       <div
         className="fixed inset-0 z-0 pointer-events-none opacity-20"
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.1) 0%, transparent 70%)'
-        }}
+        style={{ background: "radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.1) 0%, transparent 70%)" }}
       />
-
-      {/* Layer 1 */}
-      <div
-        ref={layer1Ref}
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-1000 ease-out will-change-[background]"
-      />
-
-      {/* Layer 2 */}
-      <div
-        ref={layer2Ref}
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-1000 ease-out will-change-[background]"
-      />
+      <div ref={layer1Ref} className="pointer-events-none fixed inset-0 z-0 will-change-[background]" />
+      <div ref={layer2Ref} className="pointer-events-none fixed inset-0 z-0 will-change-[background]" />
     </>
   );
 }
