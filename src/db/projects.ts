@@ -180,7 +180,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "CqJeLRk_6Eg",
     video_title: "Don't Let Intimacy Issues Ruin Your Relationship! 🛑 | Take The 2-Minute Men's Test",
-    video_description: "",
+    video_description: "👉 Take The 2-Minute Men's Test Now:",
     tags: ["Metaads"],
     cover_image: "CqJeLRk_6Eg",
     publish_date: "2026-06-25",
