@@ -387,7 +387,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "Wnzl6GDhkfE",
-    video_title: "Option 04 (Hook-focused & High Click-Through): बेडरूम की दिक्कतों को रिश्ते पर हावी मत होने दें! 🛑",
+    video_title: "Option 04 (Hook-focused & High Click-Through): बेडरूम की दिक्कतों को रिश्ते पर हावी मत होने दें!",
     video_description: "",
     tags: ["Metaads"],
     cover_image: "Wnzl6GDhkfE",
