@@ -724,7 +724,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "pAsejwdzgD8",
     video_title: "\"Chai की नहीं, Timing की बात हो रही है!\" ☕❌ | Real Men's Healthcare",
-    video_description: "क्या आप भी टाइमिंग की दिक्कतों से परेशान हैं और किसी सही इलाज की जगह अजीबोगरीब जड़ी-बूटियों, चूरन, या घरेलू नुस्खों के चक्कर में अपना समय बर्बाद कर रहे हैं? 🛑...",
+    video_description: "क्या आप भी टाइमिंग की दिक्कतों से परेशान हैं और किसी सही इलाज की जगह अजीबोगरीब जड़ी-बूटियों, चूरन, या घरेलू नुस्खों के चक्कर में अपना समय बर्बाद कर रहे हैं? 🛑..",
     tags: ["Metaads"],
     cover_image: "pAsejwdzgD8",
     publish_date: "2026-06-25",
