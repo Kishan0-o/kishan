@@ -19,22 +19,3 @@ export function useIsMobile() {
 
   return !!isMobile;
 }
-
-// Touch/pointer based detection (more accurate for performance decisions)
-export function useMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    const check = () => {
-      setIsMobile(
-        window.matchMedia("(hover: none) and (pointer: coarse)").matches ||
-        window.innerWidth < 768
-      );
-    };
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  return isMobile;
-}
