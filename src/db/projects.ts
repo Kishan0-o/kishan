@@ -15,7 +15,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "0:23",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "RDwVlzwaPU4",
@@ -31,7 +31,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "0:59",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "uQC24wdpf64",
@@ -47,7 +47,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "0:37",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "Ad7lUPpkB-Y",
@@ -63,7 +63,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "0:56",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "-kJ8LrZV1T0",
@@ -79,7 +79,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "1:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "I0uFSudJAkA",
@@ -95,7 +95,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "1:31",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "2NafJTYlc5M",
@@ -111,7 +111,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "1:18",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "QCb8yJn8D2E",
@@ -127,7 +127,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured"],
     duration: "0:45",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "QgXnAqiuBsA",
@@ -143,7 +143,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:28",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "OpByRsA3lbA",
@@ -159,7 +159,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "Myb3O9M9Ud8",
@@ -175,7 +175,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "CqJeLRk_6Eg",
@@ -191,7 +191,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:34",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "BOrbtlQoCAI",
@@ -207,7 +207,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:56",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "eHye0PyxNkQ",
@@ -223,7 +223,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:05",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "l9lKaV2T1vQ",
@@ -239,7 +239,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:54",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "MMHKvEl1Foo",
@@ -255,7 +255,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "1PqnvNM08pU",
@@ -271,7 +271,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "ycsDGATJKaU",
@@ -287,7 +287,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:26",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "mxD5sNhhF30",
@@ -303,7 +303,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:27",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "qZtOwEOOVKM",
@@ -319,7 +319,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured", "Shorts"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "CRxEa40onZ8",
@@ -335,7 +335,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured", "Shorts"],
     duration: "0:57",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "KIi-GNrS3Wo",
@@ -351,7 +351,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured", "Shorts"],
     duration: "0:35",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "9FybW5O9YlY",
@@ -367,7 +367,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured", "Shorts"],
     duration: "0:39",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "-kY5Sb3gSHE",
@@ -383,7 +383,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "s0vDWGJYG84",
@@ -399,7 +399,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:30",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "Wnzl6GDhkfE",
@@ -415,7 +415,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:29",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "sA-9LmpNw_0",
@@ -495,7 +495,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:35",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "BsHrg9OSpgQ",
@@ -511,7 +511,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:33",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "WPpFZ5OMINQ",
@@ -527,7 +527,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:37",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "5maln15Dfrk",
@@ -543,7 +543,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Featured", "Shorts"],
     duration: "0:36",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "977u2dwYd_0",
@@ -559,7 +559,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:22",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "xNDfUooyCqw",
@@ -575,7 +575,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:38",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "H9N5jvbmNhI",
@@ -591,7 +591,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:39",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "eUR0CIZ2ow0",
@@ -607,7 +607,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:43",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "R9QeTSN-nO8",
@@ -623,7 +623,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:46",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "fgqYbtZpkBY",
@@ -639,7 +639,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:43",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "G5qRYKkRnWQ",
@@ -655,7 +655,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:51",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "mdbenYuF7pM",
@@ -671,7 +671,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:41",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "oMBUNwPHD-w",
@@ -687,7 +687,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:45",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "UMzqMhH6vQI",
@@ -703,7 +703,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:28",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "EwpM2r4MLWk",
@@ -719,7 +719,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:28",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "v3tMii54Pqk",
@@ -735,7 +735,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:35",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "2sZcM85ENE8",
@@ -751,7 +751,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Shorts"],
     duration: "0:50",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "SmoWNatw9Bw",
@@ -767,7 +767,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:33",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "1h34IPHmHfA",
@@ -783,7 +783,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "0:33",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "pAsejwdzgD8",
@@ -799,7 +799,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:05",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "LDE-8aBPmZQ",
@@ -815,7 +815,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:05",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "hHTxV7x8JUY",
@@ -831,7 +831,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:08",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "RRbF-eej7Ds",
@@ -847,7 +847,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:16",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "w1I7E0e6wlM",
@@ -863,7 +863,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:02",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "a1pAgtxm4ps",
@@ -879,7 +879,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:04",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "noYusL8aR1A",
@@ -895,7 +895,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:05",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "cU2djDRNy9g",
@@ -911,7 +911,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:07",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "PftKMfHlfXM",
@@ -927,7 +927,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:06",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "0xVd76BMKkE",
@@ -943,7 +943,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:02",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
   {
     id: "Mt_1L1S9tB0",
@@ -959,7 +959,7 @@ export const allVideoProjects: VideoProject[] = [
     project_images: [],
     category: ["Meta Ads"],
     duration: "1:02",
-    software_used: ["CapCut"],
+    software_used: ["Premiere Pro"],
   },
 ];
 
