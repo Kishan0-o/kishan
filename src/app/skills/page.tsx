@@ -33,14 +33,14 @@ const updatedVideoEditingSkills = [
     description: "Advanced timeline organization, video editing, audio synchronization, and technical color grading using video scopes to maintain perfect exposure, contrast, and professional look consistency."
   },
   {
-    name: "CapCut",
-    image_link: "/tools/capcut.png", 
-    description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
-  },
-  {
     name: "Adobe Photoshop",
     image_link: "/tools/Adobe_Photoshop_CC.png", 
     description: "Essential tool for digital asset creation. Crafting high-converting thumbnails, extracting clean image assets, design layout manipulation, and creating eye-catching visual elements for Meta ad graphics."
+  },
+  {
+    name: "CapCut",
+    image_link: "/tools/capcut.png", 
+    description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
   },
   {
     name: "DaVinci Resolve",
