@@ -26,10 +26,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect With Me</h4>
             <div className="flex space-x-4">
-              <a href="https://www.youtube.com/@vfxlyrical" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><Youtube /></a>
-              <a href="https://www.instagram.com/kishan0_o" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><Instagram /></a>
-              <a href="https://www.linkedin.com/in/kishan--/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><Linkedin /></a>
-              <a href="mailto:098kishan@gmail.com" className="text-gray-400 hover:text-white"><Mail /></a>
+              <a href="https://www.youtube.com/@vfxlyrical" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-400 hover:text-white"><Youtube /></a>
+              <a href="https://www.instagram.com/kishan0_o" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white"><Instagram /></a>
+              <a href="https://www.linkedin.com/in/kishan--/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white"><Linkedin /></a>
+              <a href="mailto:098kishan@gmail.com" aria-label="Email" className="text-gray-400 hover:text-white"><Mail /></a>
             </div>
           </div>
         </div>
