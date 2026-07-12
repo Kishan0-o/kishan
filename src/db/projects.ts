@@ -429,7 +429,7 @@ export const allVideoProjects: VideoProject[] = [
     client_feedback: "",
     video_link: "https://www.youtube.com/shorts/R3zy7r5xul0",
     project_images: [],
-    category: ["Featured", "Shorts"],
+    category: ["Shorts"],
     duration: "0:52",
     software_used: ["Premiere Pro"],
   },
