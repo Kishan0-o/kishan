@@ -28,14 +28,14 @@ import {
 // Technical stack data array
 const updatedVideoEditingSkills = [
   {
-    name: "CapCut",
-    image_link: "/tools/capcut.png", 
-    description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
-  },
-  {
     name: "Adobe Premiere Pro",
     image_link: "/tools/Adobe_Premiere_Pro_CC.png",
     description: "Advanced timeline organization, video editing, audio synchronization, and technical color grading using video scopes to maintain perfect exposure, contrast, and professional look consistency."
+  },
+  {
+    name: "CapCut",
+    image_link: "/tools/capcut.png", 
+    description: "My go-to powerhouse for short-form content. Expert in engineering fast-paced Instagram Reels and YouTube Shorts with precise cuts, frame-accurate dynamic subtitles, sound design hooks, and engagement-focused pacing."
   },
   {
     name: "Adobe Photoshop",
