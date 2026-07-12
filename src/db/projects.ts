@@ -417,7 +417,23 @@ export const allVideoProjects: VideoProject[] = [
     duration: "0:29",
     software_used: ["CapCut"],
   },
-       {
+  {
+    id: "sA-9LmpNw_0",
+    video_title: "क्Morning Erection क्यों होता है? Body का Night Health Check",
+    video_description: "Morning erection कोई random चीज़ नहीं है। Sleep के दौरान बॉडी blood flow, oxygen और hormones को regulate करती है, जिससे morning erection होता है।",
+    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
+    cover_image: "sA-9LmpNw_0",
+    publish_date: "2026-07-12",
+    client_name: "RaazMD",
+    client_image: "/companies/RaazMD.png",
+    client_feedback: "",
+    video_link: "https://www.youtube.com/shorts/sA-9LmpNw_0",
+    project_images: [],
+    category: ["Shorts"],
+    duration: "0:27",
+    software_used: ["Premiere Pro"],
+  },
+  {
     id: "OrrfGqbfqHc",
     video_title: "क्या Morning Erection का कारण Sexual Dreams हैं? 🤔Truth Explained",
     video_description: "क्क्या morning erection सिर्फ intimate dreams की वजह से होता है?  Science क्या कहती है? जानिए इसका असली reason और REM sleep का connection.",
@@ -433,7 +449,7 @@ export const allVideoProjects: VideoProject[] = [
     duration: "0:32",
     software_used: ["Premiere Pro"],
   },
-     {
+  {
     id: "g6Vxt49wZPU",
     video_title: "Morning Erections का सच! | Myths vs Science Explained",
     video_description: "क्या morning erections सिर्फ sexual arousal की वजह से होते हैं? जानिए इसके पीछे की असली science",
