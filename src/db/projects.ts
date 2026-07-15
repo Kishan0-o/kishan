@@ -115,7 +115,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "QCb8yJn8D2E",
-    video_title: "Title: Alcohol से हो रही है Performance खराब? 🍷 | Get Real Doctor Advice!",
+    video_title: "Title: Alcohol से हो रही है Performance खराब? 🍷| Get Real Doctor Advice!",
     video_description: "",
     tags: [],
     cover_image: "QCb8yJn8D2E",
