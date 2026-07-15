@@ -419,7 +419,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "sA-9LmpNw_0",
-    video_title: "क्Morning Erection क्यों होता है? Body का Night Health Check",
+    video_title: "Morning Erection क्यों होता है? Body का Night Health Check",
     video_description: "Morning erection कोई random चीज़ नहीं है। Sleep के दौरान बॉडी blood flow, oxygen और hormones को regulate करती है, जिससे morning erection होता है।",
     tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
     cover_image: "sA-9LmpNw_0",
