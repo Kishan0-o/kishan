@@ -6,7 +6,6 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/project-card";
 import type { VideoProject } from "@/types/videos";
-import { getVideoProjectsByCategory } from "@/lib/helper";
 
 interface ProjectGridProps {
   initialCategories: { category: string; count: number }[];
@@ -30,7 +29,10 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
     if (selectedCategory === "All") {
         projects = initialProjects;
     } else {
-        projects = getVideoProjectsByCategory(selectedCategory);
+        // Filter from the full merged project list (initialProjects) instead of
+        // only the hardcoded static list, so projects added via the "+" admin
+        // form show up correctly under their category tabs too, not just "All".
+        projects = initialProjects.filter((p) => p.category.includes(selectedCategory));
     }
     
     setAllProjects(projects);
