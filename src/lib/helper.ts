@@ -1,7 +1,7 @@
 import { clientsData } from "@/db/clients";
 import { allVideoProjects } from "@/db/projects";
 import { Client, VideoProject } from "@/types/videos";
-import { getExtraProjects } from "@/lib/kv";
+import { getExtraProjects, getHiddenProjectIds } from "@/lib/kv";
 
 // Pulls the YouTube video ID out of a full URL (watch/embed/shorts/youtu.be)
 export const extractYouTubeId = (url: string): string | null => {
@@ -12,13 +12,21 @@ export const extractYouTubeId = (url: string): string | null => {
   return match ? match[1] : null;
 };
 
-// Combines the hardcoded projects with anything saved via the "+" admin form
+// Combines the hardcoded projects with anything saved via the "+" admin
+// form, and filters out anything deleted via the trash icon.
 export const getMergedProjects = async (): Promise<VideoProject[]> => {
-  const extraProjects = await getExtraProjects();
-  return [...extraProjects, ...allVideoProjects].sort(
-    (a, b) =>
-      new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
-  );
+  const [extraProjects, hiddenIds] = await Promise.all([
+    getExtraProjects(),
+    getHiddenProjectIds(),
+  ]);
+  const hiddenSet = new Set(hiddenIds);
+
+  return [...extraProjects, ...allVideoProjects]
+    .filter((p) => !hiddenSet.has(p.id))
+    .sort(
+      (a, b) =>
+        new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
+    );
 };
 
 export const getCategoriesWithCountFromProjects = (
