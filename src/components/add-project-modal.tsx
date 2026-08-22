@@ -3,13 +3,21 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, m } from "framer-motion";
-import { X, Loader2, Lock } from "lucide-react";
+import { X, Loader2, Lock, Check } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const CATEGORY_OPTIONS = ["Featured", "Shorts", "Meta Ads"];
+const SOFTWARE_OPTIONS = [
+  "Premiere Pro",
+  "After Effects",
+  "DaVinci Resolve",
+  "Photoshop",
+  "Illustrator",
+  "Audition",
+];
 
 const SESSION_KEY = "portfolio_admin_unlocked";
 
@@ -43,11 +51,13 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
     client_name: "",
     category: ["Featured"] as string[],
     duration: "",
-    software_used: "",
+    software_used: [] as string[],
     tags: "",
   });
   const [customCategory, setCustomCategory] = useState("");
   const [extraCategories, setExtraCategories] = useState<string[]>([]);
+  const [customSoftware, setCustomSoftware] = useState("");
+  const [extraSoftware, setExtraSoftware] = useState<string[]>([]);
 
   const handleClose = () => {
     setPasswordError("");
@@ -115,6 +125,33 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
     setCustomCategory("");
   };
 
+  const toggleSoftware = (item: string) => {
+    setForm((prev) => {
+      const has = prev.software_used.includes(item);
+      return {
+        ...prev,
+        software_used: has
+          ? prev.software_used.filter((s) => s !== item)
+          : [...prev.software_used, item],
+      };
+    });
+  };
+
+  const addCustomSoftware = () => {
+    const trimmed = customSoftware.trim();
+    if (!trimmed) return;
+    if (!SOFTWARE_OPTIONS.includes(trimmed) && !extraSoftware.includes(trimmed)) {
+      setExtraSoftware((prev) => [...prev, trimmed]);
+    }
+    if (!form.software_used.includes(trimmed)) {
+      setForm((prev) => ({
+        ...prev,
+        software_used: [...prev.software_used, trimmed],
+      }));
+    }
+    setCustomSoftware("");
+  };
+
   const resetForm = () => {
     setForm({
       video_title: "",
@@ -123,11 +160,13 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
       client_name: "",
       category: ["Featured"],
       duration: "",
-      software_used: "",
+      software_used: [],
       tags: "",
     });
     setCustomCategory("");
     setExtraCategories([]);
+    setCustomSoftware("");
+    setExtraSoftware([]);
   };
 
   const handleSubmit = async () => {
@@ -239,7 +278,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                 </h3>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs text-gray-400">
+                  <label className="text-xs font-medium text-gray-200">
                     YouTube Link *
                   </label>
                   <Input
@@ -250,7 +289,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs text-gray-400">
+                  <label className="text-xs font-medium text-gray-200">
                     Video Title *
                   </label>
                   <Input
@@ -261,7 +300,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs text-gray-400">Description</label>
+                  <label className="text-xs font-medium text-gray-200">Description</label>
                   <Textarea
                     placeholder="Short description (optional)"
                     value={form.video_description}
@@ -273,7 +312,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="space-y-1.5">
-                    <label className="text-xs text-gray-400">
+                    <label className="text-xs font-medium text-gray-200">
                       Client Name
                     </label>
                     <Input
@@ -285,7 +324,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-xs text-gray-400">Duration</label>
+                    <label className="text-xs font-medium text-gray-200">Duration</label>
                     <Input
                       placeholder="e.g. 0:45"
                       value={form.duration}
@@ -295,7 +334,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs text-gray-400">Category</label>
+                  <label className="text-xs font-medium text-gray-200">Category</label>
                   <div className="flex flex-wrap gap-2">
                     {[...CATEGORY_OPTIONS, ...extraCategories].map((cat) => {
                       const selected = form.category.includes(cat);
@@ -304,17 +343,23 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                           key={cat}
                           type="button"
                           onClick={() => toggleCategory(cat)}
-                          className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${
+                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${
                             selected
                               ? "bg-white text-black border-white"
                               : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white"
                           }`}
                         >
+                          {selected && <Check size={12} strokeWidth={3} />}
                           {cat}
                         </button>
                       );
                     })}
                   </div>
+                  <p className="text-[11px] text-gray-500 pt-1">
+                    {form.category.length > 0
+                      ? `Selected: ${form.category.join(", ")}`
+                      : "Nothing selected yet"}
+                  </p>
                   <div className="flex gap-2 pt-1">
                     <Input
                       placeholder="Add a new category..."
@@ -336,19 +381,61 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                       Add
                     </Button>
                   </div>
+                  <p className="text-[11px] text-gray-500">
+                    Type a category not listed above, then hit &quot;Add&quot; to create and select it as a new chip.
+                  </p>
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs text-gray-400">
-                    Software Used (comma separated)
+                  <label className="text-xs font-medium text-gray-200">
+                    Software Used
                   </label>
-                  <Input
-                    placeholder="Premiere Pro, After Effects..."
-                    value={form.software_used}
-                    onChange={(e) =>
-                      updateField("software_used", e.target.value)
-                    }
-                  />
+                  <div className="flex flex-wrap gap-2">
+                    {[...SOFTWARE_OPTIONS, ...extraSoftware].map((item) => {
+                      const selected = form.software_used.includes(item);
+                      return (
+                        <button
+                          key={item}
+                          type="button"
+                          onClick={() => toggleSoftware(item)}
+                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${
+                            selected
+                              ? "bg-white text-black border-white"
+                              : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10 hover:text-white"
+                          }`}
+                        >
+                          {selected && <Check size={12} strokeWidth={3} />}
+                          {item}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <p className="text-[11px] text-gray-500 pt-1">
+                    {form.software_used.length > 0
+                      ? `Selected: ${form.software_used.join(", ")}`
+                      : "Nothing selected yet"}
+                  </p>
+                  <div className="flex gap-2 pt-1">
+                    <Input
+                      placeholder="Add software not listed..."
+                      value={customSoftware}
+                      onChange={(e) => setCustomSoftware(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          addCustomSoftware();
+                        }
+                      }}
+                    />
+                    <Button
+                      type="button"
+                      onClick={addCustomSoftware}
+                      variant="outline"
+                      className="shrink-0"
+                    >
+                      Add
+                    </Button>
+                  </div>
                 </div>
 
                 <Button
