@@ -1,10 +1,13 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allVideoProjects } from "@/db/projects";
-import { getExtraProjects } from "@/lib/kv";
+import { getExtraProjects, getHiddenProjectIds } from "@/lib/kv";
 import ProjectDetails from "@/components/project-details";
 
 async function findProject(id: string) {
+  const hiddenIds = await getHiddenProjectIds();
+  if (hiddenIds.includes(id)) return undefined;
+
   const builtIn = allVideoProjects.find((p) => p.id === id);
   if (builtIn) return builtIn;
   const extras = await getExtraProjects();
