@@ -34,6 +34,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [passwordError, setPasswordError] = useState("");
+  const [checkingPassword, setCheckingPassword] = useState(false);
 
   const [form, setForm] = useState({
     video_title: "",
@@ -53,13 +54,37 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
     onClose();
   };
 
-  const handlePasswordCheck = () => {
+  const handlePasswordCheck = async () => {
     if (!password.trim()) {
       setPasswordError("Enter your password.");
       return;
     }
-    sessionStorage.setItem(SESSION_KEY, "true");
-    setStep("form");
+
+    setCheckingPassword(true);
+    setPasswordError("");
+
+    try {
+      const res = await fetch("/api/verify-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const data = await res.json();
+
+      if (!res.ok || !data.valid) {
+        setPasswordError("Incorrect password.");
+        setPassword("");
+        return;
+      }
+
+      sessionStorage.setItem(SESSION_KEY, "true");
+      setStep("form");
+    } catch (err) {
+      console.error(err);
+      setPasswordError("Couldn't reach the server. Try again.");
+    } finally {
+      setCheckingPassword(false);
+    }
   };
 
   const updateField = (field: keyof typeof form, value: string) => {
@@ -192,9 +217,17 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
                 )}
                 <Button
                   onClick={handlePasswordCheck}
+                  disabled={checkingPassword}
                   className="w-full bg-white text-black hover:bg-gray-200"
                 >
-                  Continue
+                  {checkingPassword ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Checking...
+                    </>
+                  ) : (
+                    "Continue"
+                  )}
                 </Button>
               </div>
             )}
