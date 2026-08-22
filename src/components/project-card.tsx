@@ -8,6 +8,7 @@ import { Play } from "lucide-react";
 import GlassmorphismCard from "@/components/glassmorphism-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import DeleteProjectButton from "@/components/delete-project-button";
 import { VideoProject } from "@/types/videos";
 
 interface ProjectCardProps {
@@ -53,6 +54,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="flex flex-col h-full p-5">
                     {/* Media Area */}
                     <div className="relative overflow-hidden rounded-2xl aspect-video mb-5 shadow-lg bg-black isolate">
+                        <DeleteProjectButton
+                            projectId={project.id}
+                            projectTitle={project.video_title}
+                        />
                         <AnimatePresence mode="wait">
                             {isPlaying ? (
                                 <m.div
