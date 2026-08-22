@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, Youtube, Instagram, Linkedin, Twitter, Mail } from "lucide-react";
 import { Clapperboard } from "./ui/Clapperboard";
+import AddProjectModal from "./add-project-modal";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -45,6 +46,7 @@ const socialLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [addProjectOpen, setAddProjectOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -77,18 +79,21 @@ export default function Navbar() {
         `}
       >
         <div className="w-full flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 group">
+          <div className="flex items-center space-x-3 group">
             <div
               className={`p-2 rounded-lg transition-all duration-300 ${
                 scrolled ? "bg-white/5 group-hover:bg-blue-600" : "bg-white/10 group-hover:bg-blue-600"
               }`}
             >
-              <Clapperboard />
+              <Clapperboard onIconClick={() => setAddProjectOpen(true)} />
             </div>
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-200 transition-colors">
+            <Link
+              href="/"
+              className="text-xl font-bold tracking-tight text-white group-hover:text-blue-200 transition-colors"
+            >
               Kishan
-            </span>
-          </Link>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -194,6 +199,11 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       </div>
+
+      <AddProjectModal
+        isOpen={addProjectOpen}
+        onClose={() => setAddProjectOpen(false)}
+      />
     </m.nav>
   );
 }

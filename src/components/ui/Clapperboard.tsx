@@ -8,6 +8,7 @@ interface ClapperboardProps extends React.SVGAttributes<SVGSVGElement> {
   height?: number;
   strokeWidth?: number;
   stroke?: string;
+  onIconClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const transition: Transition = {
@@ -34,6 +35,7 @@ const Clapperboard = ({
   height = 28,
   strokeWidth = 2,
   stroke = "#ffffff",
+  onIconClick,
   ...props
 }: ClapperboardProps) => {
   const controls = useAnimation();
@@ -50,6 +52,7 @@ const Clapperboard = ({
       }}
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
+      onClick={onIconClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

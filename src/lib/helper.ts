@@ -1,6 +1,40 @@
 import { clientsData } from "@/db/clients";
 import { allVideoProjects } from "@/db/projects";
 import { Client, VideoProject } from "@/types/videos";
+import { getExtraProjects } from "@/lib/kv";
+
+// Pulls the YouTube video ID out of a full URL (watch/embed/shorts/youtu.be)
+export const extractYouTubeId = (url: string): string | null => {
+  if (!url) return null;
+  const match = url.match(
+    /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|v\/|.+\?v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+  );
+  return match ? match[1] : null;
+};
+
+// Combines the hardcoded projects with anything saved via the "+" admin form
+export const getMergedProjects = async (): Promise<VideoProject[]> => {
+  const extraProjects = await getExtraProjects();
+  return [...extraProjects, ...allVideoProjects].sort(
+    (a, b) =>
+      new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
+  );
+};
+
+export const getCategoriesWithCountFromProjects = (
+  projects: VideoProject[]
+): { category: string; count: number }[] => {
+  const categoryCountMap = new Map<string, number>();
+  projects.forEach((project) => {
+    project.category.forEach((cat) => {
+      categoryCountMap.set(cat, (categoryCountMap.get(cat) || 0) + 1);
+    });
+  });
+  const sortedCategories = Array.from(categoryCountMap.entries())
+    .map(([category, count]) => ({ category, count }))
+    .sort((a, b) => b.count - a.count);
+  return [{ category: "All", count: projects.length }, ...sortedCategories];
+};
 
 // Helper function to get all projects sorted by date (latest first)
 export const getAllVideoProjects = (): VideoProject[] => {

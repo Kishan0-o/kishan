@@ -4,14 +4,14 @@ import Hero from "@/components/hero";
 import GlassmorphismCard from "@/components/glassmorphism-card";
 import ProjectGrid from "@/components/project-grid";
 import {
-  getVideoCategoriesWithCountIncludingAll,
-  getAllVideoProjectsFlattened
+  getMergedProjects,
+  getCategoriesWithCountFromProjects,
 } from "@/lib/helper";
 
-export default function HomePage() {
+export default async function HomePage() {
   // Fetch data on the server
-  const categories = getVideoCategoriesWithCountIncludingAll();
-  const allProjects = getAllVideoProjectsFlattened(); // We need all projects initially for the grid to filter client-side
+  const allProjects = await getMergedProjects(); // We need all projects initially for the grid to filter client-side
+  const categories = getCategoriesWithCountFromProjects(allProjects);
 
   return (
     <div className="min-h-screen relative overflow-hidden">

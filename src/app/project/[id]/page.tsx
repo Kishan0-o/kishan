@@ -1,7 +1,15 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allVideoProjects } from "@/db/projects";
+import { getExtraProjects } from "@/lib/kv";
 import ProjectDetails from "@/components/project-details";
+
+async function findProject(id: string) {
+  const builtIn = allVideoProjects.find((p) => p.id === id);
+  if (builtIn) return builtIn;
+  const extras = await getExtraProjects();
+  return extras.find((p) => p.id === id);
+}
 
 // Generate unique static params for all projects
 export async function generateStaticParams() {
@@ -17,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const project = allVideoProjects.find((p) => p.id === id);
+  const project = await findProject(id);
 
   if (!project) {
     return {
@@ -49,7 +57,7 @@ export default async function ProjectPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const project = allVideoProjects.find((p) => p.id === id);
+  const project = await findProject(id);
 
   if (!project) {
     notFound();
