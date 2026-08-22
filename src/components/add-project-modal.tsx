@@ -8,6 +8,11 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  getStoredAdminPassword,
+  setStoredAdminPassword,
+  clearStoredAdminPassword,
+} from "@/lib/admin-session";
 
 const CATEGORY_OPTIONS = ["Featured", "Shorts", "Meta Ads"];
 const SOFTWARE_OPTIONS = [
@@ -18,8 +23,6 @@ const SOFTWARE_OPTIONS = [
   "Illustrator",
   "Audition",
 ];
-
-const SESSION_KEY = "portfolio_admin_unlocked";
 
 type Step = "password" | "form";
 
@@ -32,14 +35,11 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
   const router = useRouter();
 
   const getInitialStep = (): Step => {
-    const unlocked =
-      typeof window !== "undefined" &&
-      sessionStorage.getItem(SESSION_KEY) === "true";
-    return unlocked ? "form" : "password";
+    return getStoredAdminPassword() ? "form" : "password";
   };
 
   const [step, setStep] = useState<Step>(getInitialStep);
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(() => getStoredAdminPassword() || "");
   const [submitting, setSubmitting] = useState(false);
   const [passwordError, setPasswordError] = useState("");
   const [checkingPassword, setCheckingPassword] = useState(false);
@@ -87,7 +87,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
         return;
       }
 
-      sessionStorage.setItem(SESSION_KEY, "true");
+      setStoredAdminPassword(password);
       setStep("form");
     } catch (err) {
       console.error(err);
@@ -187,7 +187,7 @@ export default function AddProjectModal({ isOpen, onClose }: AddProjectModalProp
 
       if (!res.ok) {
         if (res.status === 401) {
-          sessionStorage.removeItem(SESSION_KEY);
+          clearStoredAdminPassword();
           setStep("password");
           setPasswordError("Incorrect password. Try again.");
         } else {
