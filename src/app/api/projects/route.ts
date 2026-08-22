@@ -70,7 +70,11 @@ export async function POST(req: NextRequest) {
       cover_image: videoId,
       publish_date: new Date().toISOString().split("T")[0],
       client_name: client_name || "Personal Project",
-      client_image: client_image || "/placeholder.svg",
+      // Default to the RaazMD logo when no client image is supplied, since
+      // every project on this site is for the same client. Previously this
+      // fell back to a generic placeholder icon, which is why new projects
+      // showed a blank/gradient icon instead of the RaazMD logo.
+      client_image: client_image || "/companies/RaazMD.png",
       client_feedback: "",
       video_link,
       project_images: [],
