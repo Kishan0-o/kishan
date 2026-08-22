@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, m } from "framer-motion";
 import { Trash2, X, Loader2, Lock } from "lucide-react";
@@ -30,6 +31,12 @@ export default function DeleteProjectButton({
   const [passwordError, setPasswordError] = useState("");
   const [checking, setChecking] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Portals need `document` to exist, which is only true after mount on the client.
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const openFlow = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -111,6 +118,117 @@ export default function DeleteProjectButton({
     }
   };
 
+  const modal = (
+    <AnimatePresence>
+      {stage !== "closed" && (
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[200] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={close}
+        >
+          <m.div
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            transition={{ duration: 0.2 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-sm rounded-2xl border border-white/10 bg-[#0a0a0a] p-6 shadow-2xl"
+          >
+            <button
+              onClick={close}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <X size={20} />
+            </button>
+
+            {stage === "password" && (
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <Lock size={18} />
+                  <h3 className="text-lg font-semibold">Admin Access</h3>
+                </div>
+                <p className="text-sm text-gray-400">
+                  Enter your admin password to delete this project.
+                </p>
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handlePasswordCheck()}
+                  autoFocus
+                />
+                {passwordError && (
+                  <p className="text-sm text-red-400">{passwordError}</p>
+                )}
+                <Button
+                  onClick={handlePasswordCheck}
+                  disabled={checking}
+                  className="w-full bg-white text-black hover:bg-gray-200"
+                >
+                  {checking ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Checking...
+                    </>
+                  ) : (
+                    "Continue"
+                  )}
+                </Button>
+              </div>
+            )}
+
+            {stage === "confirm" && (
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-white">
+                  <Trash2 size={18} className="text-red-400" />
+                  <h3 className="text-lg font-semibold">Delete project?</h3>
+                </div>
+                <p className="text-sm text-gray-400">
+                  You&apos;re about to permanently delete{" "}
+                  <span className="text-white font-medium">
+                    &quot;{projectTitle}&quot;
+                  </span>
+                  . This can&apos;t be undone.
+                </p>
+                {passwordError && (
+                  <p className="text-sm text-red-400">{passwordError}</p>
+                )}
+                <div className="flex gap-2">
+                  <Button
+                    onClick={close}
+                    variant="outline"
+                    className="flex-1"
+                    disabled={deleting}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    onClick={handleDelete}
+                    disabled={deleting}
+                    className="flex-1 bg-red-600 text-white hover:bg-red-700"
+                  >
+                    {deleting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Deleting...
+                      </>
+                    ) : (
+                      "Delete"
+                    )}
+                  </Button>
+                </div>
+              </div>
+            )}
+          </m.div>
+        </m.div>
+      )}
+    </AnimatePresence>
+  );
+
   return (
     <>
       <button
@@ -121,114 +239,7 @@ export default function DeleteProjectButton({
         <Trash2 size={14} />
       </button>
 
-      <AnimatePresence>
-        {stage !== "closed" && (
-          <m.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
-            onClick={close}
-          >
-            <m.div
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              transition={{ duration: 0.2 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-sm rounded-2xl border border-white/10 bg-[#0a0a0a] p-6 shadow-2xl"
-            >
-              <button
-                onClick={close}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-                aria-label="Close"
-              >
-                <X size={20} />
-              </button>
-
-              {stage === "password" && (
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-white">
-                    <Lock size={18} />
-                    <h3 className="text-lg font-semibold">Admin Access</h3>
-                  </div>
-                  <p className="text-sm text-gray-400">
-                    Enter your admin password to delete this project.
-                  </p>
-                  <Input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handlePasswordCheck()}
-                    autoFocus
-                  />
-                  {passwordError && (
-                    <p className="text-sm text-red-400">{passwordError}</p>
-                  )}
-                  <Button
-                    onClick={handlePasswordCheck}
-                    disabled={checking}
-                    className="w-full bg-white text-black hover:bg-gray-200"
-                  >
-                    {checking ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Checking...
-                      </>
-                    ) : (
-                      "Continue"
-                    )}
-                  </Button>
-                </div>
-              )}
-
-              {stage === "confirm" && (
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-white">
-                    <Trash2 size={18} className="text-red-400" />
-                    <h3 className="text-lg font-semibold">Delete project?</h3>
-                  </div>
-                  <p className="text-sm text-gray-400">
-                    You&apos;re about to permanently delete{" "}
-                    <span className="text-white font-medium">
-                      &quot;{projectTitle}&quot;
-                    </span>
-                    . This can&apos;t be undone.
-                  </p>
-                  {passwordError && (
-                    <p className="text-sm text-red-400">{passwordError}</p>
-                  )}
-                  <div className="flex gap-2">
-                    <Button
-                      onClick={close}
-                      variant="outline"
-                      className="flex-1"
-                      disabled={deleting}
-                    >
-                      Cancel
-                    </Button>
-                    <Button
-                      onClick={handleDelete}
-                      disabled={deleting}
-                      className="flex-1 bg-red-600 text-white hover:bg-red-700"
-                    >
-                      {deleting ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Deleting...
-                        </>
-                      ) : (
-                        "Delete"
-                      )}
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </m.div>
-          </m.div>
-        )}
-      </AnimatePresence>
+      {mounted && createPortal(modal, document.body)}
     </>
   );
 }
