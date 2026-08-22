@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { addExtraProject, getExtraProjects } from "@/lib/kv";
+import { addExtraProject, getExtraProjects, deleteProjectEverywhere } from "@/lib/kv";
 import { extractYouTubeId } from "@/lib/helper";
 import type { VideoProject } from "@/types/videos";
 
@@ -94,6 +94,39 @@ export async function POST(req: NextRequest) {
     console.error("Failed to add project:", error);
     return NextResponse.json(
       { error: "Something went wrong while adding the project." },
+      { status: 500 }
+    );
+  }
+}
+
+// DELETE: remove a project (works for both "+"-button-added projects and
+// original built-in ones). Requires the correct admin password.
+export async function DELETE(req: NextRequest) {
+  try {
+    const { password, id } = await req.json();
+
+    const adminPassword = process.env.ADMIN_PASSWORD;
+    if (!adminPassword) {
+      return NextResponse.json(
+        { error: "ADMIN_PASSWORD is not set on the server." },
+        { status: 500 }
+      );
+    }
+    if (!password || password !== adminPassword) {
+      return NextResponse.json({ error: "Incorrect password." }, { status: 401 });
+    }
+
+    if (!id) {
+      return NextResponse.json({ error: "Missing project id." }, { status: 400 });
+    }
+
+    await deleteProjectEverywhere(id);
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Failed to delete project:", error);
+    return NextResponse.json(
+      { error: "Something went wrong while deleting the project." },
       { status: 500 }
     );
   }
