@@ -43,7 +43,7 @@ export default function Hero() {
                     </div>
                 </m.div>
 
-                {/* Main Title - Updated to MOTION DESIGNER with signature premium tracking */}
+                {/* Main Title - Updated to VIDEO EDITOR with signature premium tracking */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-8 leading-[0.9] w-full flex flex-col items-center">
                     <m.span
                         initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
@@ -51,7 +51,7 @@ export default function Hero() {
                         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.1 }}
                         className="block w-full bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm pb-2"
                     >
-                        MOTION
+                        VIDEO
                     </m.span>
                     <m.span
                         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
@@ -59,7 +59,7 @@ export default function Hero() {
                         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.3 }}
                         className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 pb-4 filter drop-shadow-[0_0_30px_rgba(59,130,246,0.25)]"
                     >
-                        DESIGNER
+                        EDITOR
                     </m.span>
                 </h1>
 
@@ -70,7 +70,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 1, 0.5, 1] }}
                     className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-12 sm:mb-16 md:px-0"
                 >
-                    Turning raw footage into visual stories — with style, precision, and a touch of <span className="text-white font-medium drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">cinematic magic</span>.
+                    Turning raw footage into visual stories — with precise cuts, pacing, and a touch of <span className="text-white font-medium drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">cinematic magic</span>.
                 </m.p>
 
                 {/* Buttons */}
