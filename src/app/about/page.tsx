@@ -26,7 +26,7 @@ export default function AboutPage() {
             Behind the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Timeline</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Visual Storyteller. Motion Graphics Artist. Problem Solver.
+            Visual Storyteller. Video Editor. Problem Solver.
           </p>
         </m.div>
 
@@ -64,7 +64,7 @@ export default function AboutPage() {
                     </m.div>
                     <div className="h-1 w-16 md:w-20 bg-purple-500 mt-4 rounded-full" />
                     <p className="text-gray-300 mt-4 text-xs md:text-sm font-medium tracking-wide uppercase">
-                      Professional Motion Designer & Graphic Designer
+                      Professional Video Editor & Graphic Designer
                     </p>
                   </div>
                 </div>
