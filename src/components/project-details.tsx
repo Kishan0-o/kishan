@@ -34,6 +34,14 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
     const [showVideo, setShowVideo] = useState(false);
     const embedUrl = getYouTubeEmbedUrl(project.video_link);
 
+    const isVertical =
+        project.video_link?.includes("/shorts/") ||
+        project.category?.includes("Shorts") ||
+        project.category?.includes("Meta Ads") ||
+        project.category?.includes("Featured") ||
+        (!project.category?.includes("Landscape") &&
+            !project.category?.includes("Documentary"));
+
     return (
         <div className="min-h-screen pt-32 pb-20 px-4">
             <div className="max-w-6xl mx-auto">
@@ -64,7 +72,13 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                     className="mb-8"
                 >
                     <GlassmorphismCard className="p-4 md:p-6">
-                        <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-900">
+                        <div
+                            className={`relative rounded-lg overflow-hidden bg-gray-900 ${
+                                isVertical
+                                    ? "aspect-[9/16] max-w-sm mx-auto shadow-2xl"
+                                    : "aspect-video"
+                            }`}
+                        >
                             {showVideo && embedUrl ? (
                                 <iframe
                                     src={`${embedUrl}?autoplay=1&modestbranding=1&rel=0`}
@@ -181,8 +195,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 {project.category.map((category) => (
                                     <Badge
                                         key={category}
-                                        variant="outline"
-                                        className="border-gray-600 text-gray-300"
+                                        className="bg-white/10 hover:bg-white/20 text-white"
                                     >
                                         {category}
                                     </Badge>
@@ -190,33 +203,54 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button asChild className="bg-red-600 hover:bg-red-700">
-                                <a
-                                    href={project.video_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <ExternalLink className="mr-2" size={16} />
-                                    Watch on YouTube
-                                </a>
-                            </Button>
-                        </div>
+                        {project.tags && project.tags.length > 0 && (
+                            <div className="mb-8">
+                                <h3 className="text-lg font-semibold mb-3 text-white">
+                                    Tags
+                                </h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.tags.map((tag) => (
+                                        <Badge
+                                            key={tag}
+                                            variant="secondary"
+                                            className="bg-gray-800 text-gray-300"
+                                        >
+                                            #{tag}
+                                        </Badge>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {project.client_feedback && (
+                            <div className="border-t border-gray-700 pt-6">
+                                <h3 className="text-lg font-semibold mb-3 text-white">
+                                    Client Feedback
+                                </h3>
+                                <div className="relative pl-6 italic text-gray-300">
+                                    <Quote
+                                        className="absolute left-0 top-0 text-blue-500"
+                                        size={18}
+                                    />
+                                    {project.client_feedback}
+                                </div>
+                            </div>
+                        )}
                     </GlassmorphismCard>
                 </m.div>
 
-                {/* Project Gallery */}
+                {/* Project Images Carousel */}
                 {project.project_images && project.project_images.length > 0 && (
                     <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        className="mt-16"
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="mb-8"
                     >
-                        <GlassmorphismCard className="p-8">
-                            <h3 className="text-2xl font-semibold mb-6 text-white text-center">
-                                Project Gallery
-                            </h3>
+                        <h2 className="text-2xl font-bold mb-4 text-white">
+                            Project Screenshots
+                        </h2>
+                        <GlassmorphismCard className="p-4 md:p-6">
                             <Carousel className="w-full max-w-4xl mx-auto">
                                 <CarouselContent>
                                     {project.project_images.map((image, index) => (
@@ -234,51 +268,35 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious className="cursor-pointer" />
-                                <CarouselNext className="cursor-pointer" />
+                                <CarouselPrevious className="left-2 bg-black/50 hover:bg-black/80 text-white border-0" />
+                                <CarouselNext className="right-2 bg-black/50 hover:bg-black/80 text-white border-0" />
                             </Carousel>
                         </GlassmorphismCard>
                     </m.div>
                 )}
 
-                {/* Client Feedback */}
-                {project.client_feedback && (
+                {/* External Link */}
+                {project.video_link && (
                     <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-16"
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="text-center"
                     >
-                        <GlassmorphismCard className="p-8">
-                            <h3 className="text-2xl font-semibold mb-6 text-white text-center">
-                                Client Feedback
-                            </h3>
-                            <div className="max-w-3xl mx-auto">
-                                <div className="flex items-center justify-center space-x-4 mb-6">
-                                    <Image
-                                        src={project.client_image || "/placeholder.svg"}
-                                        alt={project.client_name}
-                                        width={64}
-                                        height={64}
-                                        className="rounded-full"
-                                    />
-                                    <div className="text-center">
-                                        <p className="font-medium text-white text-lg">
-                                            {project.client_name}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="relative">
-                                    <Quote
-                                        className="absolute -top-4 -left-4 text-blue-400 opacity-50"
-                                        size={32}
-                                    />
-                                    <blockquote className="text-gray-300 italic text-lg text-center leading-relaxed pl-8">
-                                        "{project.client_feedback}"
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </GlassmorphismCard>
+                        <Button
+                            asChild
+                            size="lg"
+                            className="bg-white text-black hover:bg-gray-200 rounded-full px-8 h-12 font-medium transition-all hover:scale-105"
+                        >
+                            <a
+                                href={project.video_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <ExternalLink className="mr-2" size={16} />
+                                View on YouTube
+                            </a>
+                        </Button>
                     </m.div>
                 )}
             </div>
