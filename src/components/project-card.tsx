@@ -18,6 +18,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
+    const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const isVertical =
         project.video_link?.includes("/shorts/") ||
@@ -26,6 +27,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         project.category?.includes("Featured") ||
         (!project.category?.includes("Landscape") &&
             !project.category?.includes("Documentary"));
+
+    // Cleanup hover timer on unmount
+    useEffect(() => {
+        return () => {
+            if (hoverTimeoutRef.current) {
+                clearTimeout(hoverTimeoutRef.current);
+            }
+        };
+    }, []);
 
     // Handle click outside to stop playing
     useEffect(() => {
@@ -43,6 +53,23 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [isPlaying]);
+
+    const handleMouseEnter = () => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+        }
+        hoverTimeoutRef.current = setTimeout(() => {
+            setIsPlaying(true);
+        }, 150);
+    };
+
+    const handleMouseLeave = () => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+            hoverTimeoutRef.current = null;
+        }
+        setIsPlaying(false);
+    };
 
     const handlePlayClick = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -62,9 +89,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="flex flex-col h-full p-5">
                     {/* Media Area */}
                     <div
-                        className={`relative overflow-hidden rounded-2xl mb-5 shadow-lg bg-black isolate ${
+                        className={`relative overflow-hidden rounded-2xl mb-5 shadow-lg bg-black isolate cursor-pointer ${
                             isVertical ? "aspect-[9/16]" : "aspect-video"
                         }`}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
                     >
                         <DeleteProjectButton
                             projectId={project.id}
@@ -80,32 +109,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                                     className="absolute inset-0 z-20"
                                 >
                                     <iframe
-                                        src={`https://www.youtube.com/embed/${project.cover_image}?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1`}
+                                        src={`https://www.youtube.com/embed/${project.cover_image}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=${project.cover_image}`}
                                         title={project.video_title}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                        className="w-full h-full border-0"
+                                        className="w-full h-full border-0 pointer-events-none"
                                     />
-                                    <button
-                                        onClick={handleStopClick}
-                                        className="absolute top-2 right-2 bg-black/60 hover:bg-black/80 text-white p-1.5 rounded-full backdrop-blur-md transition-colors z-30"
-                                        aria-label="Close preview"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path d="M18 6 6 18" />
-                                            <path d="m6 6 18 18" />
-                                        </svg>
-                                    </button>
+                                    <Link
+                                        href={`/project/${project.id}`}
+                                        className="absolute inset-0 z-30"
+                                        aria-label={`View ${project.video_title}`}
+                                    />
                                 </m.div>
                             ) : (
                                 <div
