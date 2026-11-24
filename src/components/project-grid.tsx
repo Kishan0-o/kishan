@@ -119,7 +119,7 @@ export default function ProjectGrid({ initialCategories, initialProjects }: Proj
         {/* Projects Grid */}
         <m.div
             layout
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
         >
             {displayedProjects.map((project, index) => (
             <m.div
