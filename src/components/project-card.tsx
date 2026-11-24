@@ -19,6 +19,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
 
+    const isVertical =
+        project.video_link?.includes("/shorts/") ||
+        project.category?.includes("Shorts") ||
+        project.category?.includes("Meta Ads") ||
+        project.category?.includes("Featured") ||
+        (!project.category?.includes("Landscape") &&
+            !project.category?.includes("Documentary"));
+
     // Handle click outside to stop playing
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -53,7 +61,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <GlassmorphismCard className="h-full group hover:shadow-2xl hover:shadow-blue-900/10 transition-shadow duration-500 flex flex-col">
                 <div className="flex flex-col h-full p-5">
                     {/* Media Area */}
-                    <div className="relative overflow-hidden rounded-2xl aspect-video mb-5 shadow-lg bg-black isolate">
+                    <div
+                        className={`relative overflow-hidden rounded-2xl mb-5 shadow-lg bg-black isolate ${
+                            isVertical ? "aspect-[9/16]" : "aspect-video"
+                        }`}
+                    >
                         <DeleteProjectButton
                             projectId={project.id}
                             projectTitle={project.video_title}
@@ -112,7 +124,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                                             alt={project.video_title}
                                             fill
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                                         />
                                     </m.div>
 
