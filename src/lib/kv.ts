@@ -1,8 +1,8 @@
 import { Redis } from "@upstash/redis";
 import type { VideoProject } from "@/types/videos";
 
-const KV_KEY = "extra_projects";
-const HIDDEN_KEY = "hidden_project_ids";
+const KV_KEY = "extra_projects_v2";
+const HIDDEN_KEY = "hidden_project_ids_v2";
 
 function getRedis(): Redis | null {
   const url = process.env.KV_REST_API_URL;

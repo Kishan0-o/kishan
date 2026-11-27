@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ["latin"] });
 // const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://kishans-portfolio.vercel.app"
+  ),
   title: {
     default: "Kishan Kumar – Video Editor & Graphic Designer",
     template: "%s | Kishan Kumar",

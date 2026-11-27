@@ -1,3 +1,11 @@
+export interface VideoVariation {
+  id: string;
+  label: string;
+  video_link: string;
+  cover_image: string;
+  duration?: string;
+}
+
 export interface VideoProject {
   id: string;
   video_title: string;
@@ -13,6 +21,7 @@ export interface VideoProject {
   category: string[];
   duration?: string;
   software_used?: string[];
+  variations?: VideoVariation[];
 }
 
 export interface Client {

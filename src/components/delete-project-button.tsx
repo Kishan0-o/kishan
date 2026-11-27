@@ -19,11 +19,13 @@ type Stage = "closed" | "password" | "confirm";
 interface DeleteProjectButtonProps {
   projectId: string;
   projectTitle: string;
+  className?: string;
 }
 
 export default function DeleteProjectButton({
   projectId,
   projectTitle,
+  className,
 }: DeleteProjectButtonProps) {
   const router = useRouter();
   const [stage, setStage] = useState<Stage>("closed");
@@ -234,7 +236,10 @@ export default function DeleteProjectButton({
       <button
         onClick={openFlow}
         aria-label="Delete project"
-        className="absolute top-3 left-3 z-10 p-2 rounded-full bg-black/60 backdrop-blur-md text-gray-300 opacity-0 group-hover:opacity-100 hover:bg-red-600 hover:text-white transition-all duration-200"
+        className={
+          className ||
+          "absolute top-3 left-3 z-10 p-2 rounded-full bg-black/60 backdrop-blur-md text-gray-300 opacity-0 group-hover:opacity-100 hover:bg-red-600 hover:text-white transition-all duration-200"
+        }
       >
         <Trash2 size={14} />
       </button>

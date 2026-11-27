@@ -1,6 +1,8 @@
 export const categories = [
   "Featured",
-  "Shorts",
-  "Meta Ads",
-  "All",
+  "UGC & DTC Ads",
+  "Social Media",
+  "A/B Testing",
+  "Product Showcase",
+  "Brand Promos",
 ];

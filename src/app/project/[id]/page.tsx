@@ -5,13 +5,20 @@ import { getExtraProjects, getHiddenProjectIds } from "@/lib/kv";
 import ProjectDetails from "@/components/project-details";
 
 async function findProject(id: string) {
-  const hiddenIds = await getHiddenProjectIds();
-  if (hiddenIds.includes(id)) return undefined;
+  try {
+    const hiddenIds: string[] = await getHiddenProjectIds().catch(() => []);
+    if (hiddenIds.includes(id)) return undefined;
+  } catch {}
 
   const builtIn = allVideoProjects.find((p) => p.id === id);
   if (builtIn) return builtIn;
-  const extras = await getExtraProjects();
-  return extras.find((p) => p.id === id);
+
+  try {
+    const extras = await getExtraProjects().catch(() => []);
+    return extras.find((p) => p.id === id);
+  } catch {
+    return undefined;
+  }
 }
 
 // Generate unique static params for all projects
@@ -36,15 +43,19 @@ export async function generateMetadata({
     };
   }
 
+  const imageUrl = project.cover_image.startsWith("/")
+    ? project.cover_image
+    : `https://img.youtube.com/vi/${project.cover_image}/maxresdefault.jpg`;
+
   return {
-    title: project.video_title,
+    title: `${project.video_title} | Kishan Portfolio`,
     description: project.video_description,
     openGraph: {
       title: project.video_title,
       description: project.video_description,
       images: [
         {
-          url: `https://img.youtube.com/vi/${project.cover_image}/maxresdefault.jpg`,
+          url: imageUrl,
           width: 1280,
           height: 720,
           alt: project.video_title,

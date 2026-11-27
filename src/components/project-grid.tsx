@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { m } from "framer-motion";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,155 +12,147 @@ interface ProjectGridProps {
   initialProjects: VideoProject[];
 }
 
-export default function ProjectGrid({ initialCategories, initialProjects }: ProjectGridProps) {
-  // 1. Set default starting tab on page load to "Featured"
-  const [selectedCategory, setSelectedCategory] = useState("Featured");
-  const [displayedProjects, setDisplayedProjects] = useState<VideoProject[]>(initialProjects.slice(0, 9));
-  const [allProjects, setAllProjects] = useState<VideoProject[]>(initialProjects);
+export default function ProjectGrid({
+  initialCategories,
+  initialProjects,
+}: ProjectGridProps) {
+  // 1. Default starting tab is "Featured" when populated, otherwise "UGC & DTC Ads"
+  const defaultCategory =
+    (initialCategories.find((c) => c.category === "Featured")?.count ?? 0) > 0
+      ? "Featured"
+      : "UGC & DTC Ads";
+  const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
+
+  const ITEMS_PER_PAGE = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(initialProjects.length > 9);
 
-  const ITEMS_PER_PAGE = 9;
+  // Filter projects based on selected category
+  const filteredProjects = useMemo(() => {
+    return initialProjects.filter((p) => p.category.includes(selectedCategory));
+  }, [initialProjects, selectedCategory]);
 
-  // Load projects for selected category
-  useEffect(() => {
-    let projects;
-    if (selectedCategory === "All") {
-        projects = initialProjects;
-    } else {
-        // Filter from the full merged project list (initialProjects) instead of
-        // only the hardcoded static list, so projects added via the "+" admin
-        // form show up correctly under their category tabs too, not just "All".
-        projects = initialProjects.filter((p) => p.category.includes(selectedCategory));
-    }
-    
-    setAllProjects(projects);
-    setDisplayedProjects(projects.slice(0, ITEMS_PER_PAGE));
-    setCurrentPage(1);
-    setHasMore(projects.length > ITEMS_PER_PAGE);
-  }, [selectedCategory, initialProjects]);
+  const displayedProjects = useMemo(() => {
+    return filteredProjects.slice(0, currentPage * ITEMS_PER_PAGE);
+  }, [filteredProjects, currentPage, ITEMS_PER_PAGE]);
 
-  // Load more projects
+  const hasMore = displayedProjects.length < filteredProjects.length;
+
   const loadMoreProjects = useCallback(() => {
     if (loading || !hasMore) return;
-
     setLoading(true);
-    const nextPage = currentPage + 1;
-    const startIndex = (nextPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    const newProjects = allProjects.slice(startIndex, endIndex);
-
-    setDisplayedProjects((prev) => [...prev, ...newProjects]);
-    setCurrentPage(nextPage);
-    setHasMore(endIndex < allProjects.length);
+    setCurrentPage((prev) => prev + 1);
     setLoading(false);
-  }, [currentPage, allProjects, loading, hasMore]);
+  }, [loading, hasMore]);
 
-  // Infinite scroll for non-"All" categories
+  // Reset pagination on category change
   useEffect(() => {
-    if (selectedCategory === "All") return;
+    setCurrentPage(1);
+  }, [selectedCategory]);
 
-    const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight - 1000
-      ) {
-        loadMoreProjects();
-      }
-    };
+  // Category sort priority
+  const explicitOrder = [
+    "Featured",
+    "UGC & DTC Ads",
+    "Social Media",
+    "A/B Testing",
+    "Product Showcase",
+    "Brand Promos",
+  ];
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [selectedCategory, loadMoreProjects]);
-
-  // 2. Define the exact sorting priority order
-  const explicitOrder = ["Featured", "Shorts", "Meta Ads", "All"];
-
-  // Sort the categories based on the priority order array
-  const orderedCategories = [...initialCategories].sort((a, b) => {
-    const orderA = explicitOrder.indexOf(a.category);
-    const orderB = explicitOrder.indexOf(b.category);
-    return (orderA !== -1 ? orderA : 99) - (orderB !== -1 ? orderB : 99);
-  });
+  const orderedCategories = useMemo(() => {
+    return [...initialCategories].sort((a, b) => {
+      const orderA = explicitOrder.indexOf(a.category);
+      const orderB = explicitOrder.indexOf(b.category);
+      return (orderA !== -1 ? orderA : 99) - (orderB !== -1 ? orderB : 99);
+    });
+  }, [initialCategories]);
 
   return (
     <>
-        {/* Category Filter */}
-        <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-3 mb-16"
-        >
-            {orderedCategories.map(({ category, count }) => (
-            <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`
-                relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
-                ${selectedCategory === category
-                    ? "bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.3)] scale-105"
-                    : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5"
-                }
-                `}
-            >
-                {category}
-                <span className={`
-                ml-2 text-[10px] px-1.5 py-0.5 rounded-full transition-colors
-                ${selectedCategory === category ? "bg-black text-white" : "bg-white/10 text-gray-400"}
-                `}>
-                {count}
-                </span>
-            </button>
-            ))}
-        </m.div>
+      {/* Category Tabs */}
+      <m.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex flex-wrap justify-center items-center gap-3 mb-12"
+      >
+        {orderedCategories.map(({ category }) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`
+              relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300
+              ${
+                selectedCategory === category
+                  ? "bg-white text-black shadow-[0_0_25px_rgba(255,255,255,0.35)] scale-105"
+                  : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5"
+              }
+            `}
+          >
+            {category}
+          </button>
+        ))}
+      </m.div>
 
-        {/* Projects Grid */}
+      {/* Projects Grid */}
+      {displayedProjects.length > 0 ? (
         <m.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6"
         >
-            {displayedProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <m.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
+              key={project.id}
+              layout
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: Math.min(index * 0.04, 0.4),
+              }}
             >
-                <ProjectCard project={project} />
+              <ProjectCard
+                project={project}
+                activeCategory={selectedCategory}
+              />
             </m.div>
-            ))}
+          ))}
         </m.div>
+      ) : (
+        <div className="text-center py-24 text-gray-400">
+          <p className="text-lg">No videos match this category filter.</p>
+        </div>
+      )}
 
-        {/* Load More Button for "All" category */}
-        {selectedCategory === "All" && hasMore && (
-            <m.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center mt-20"
-            >
-            <Button
-                onClick={loadMoreProjects}
-                disabled={loading}
-                size="lg"
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 h-12 font-medium transition-all hover:scale-105"
-            >
-                {loading ? (
-                <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Loading...
-                </>
-                ) : (
-                <>
-                    Load More Projects
-                    <ArrowRight className="ml-2" size={16} />
-                </>
-                )}
-            </Button>
-            </m.div>
-        )}
+      {/* Load More Button */}
+      {hasMore && (
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center mt-16"
+        >
+          <Button
+            onClick={loadMoreProjects}
+            disabled={loading}
+            size="lg"
+            className="bg-white text-black hover:bg-gray-200 rounded-full px-8 h-12 font-medium transition-all hover:scale-105"
+          >
+            {loading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Loading...
+              </>
+            ) : (
+              <>
+                Load More
+                <ArrowRight className="ml-2" size={16} />
+              </>
+            )}
+          </Button>
+        </m.div>
+      )}
     </>
   );
 }

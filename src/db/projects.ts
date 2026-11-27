@@ -2,1013 +2,1672 @@ import { VideoProject } from "@/types/videos";
 
 export const allVideoProjects: VideoProject[] = [
   {
-    id: "STDk5dbw7As",
-    video_title: "2-3 Saal Ki Purani Pareshani? Real Patient Shares How RaazMD Changed His Life",
-    video_description: "",
-    tags: [],
-    cover_image: "STDk5dbw7As",
-    publish_date: "2026-06-26",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/STDk5dbw7As",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:23",
-    software_used: ["Premiere Pro"],
+    "id": "kanishka-x-glam21-pr-package-unboxing-and-review-ugc",
+    "video_title": "Kanishka x Glam21 \u2014 PR Package Unboxing & Review UGC",
+    "video_description": "Beauty creator PR unboxing & tactile skincare/cosmetic review edited for Glam21. Combines snappy match cuts, product macro highlights, textured overlay titles, and upbeat social pacing.",
+    "tags": [
+      "UGC Ad",
+      "Beauty",
+      "PR Unboxing",
+      "Creator Reel"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/kanishka-x-glam21-pr-package-unboxing-and-review-ugc.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Kanishka",
+    "client_image": "/companies/kanishka.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/kanishka-x-glam21-pr-package-unboxing-and-review-ugc.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:33",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "RDwVlzwaPU4",
-    video_title: "रोज़ का Stress बिगाड़ रहा है आपकी Bed Performance? 🧠⚡ | Manage Cortisol Level",
-    video_description: "",
-    tags: [],
-    cover_image: "RDwVlzwaPU4",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/RDwVlzwaPU4",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:59",
-    software_used: ["Premiere Pro"],
+    "id": "kanishka-x-loreal-loreal-star-selection-announcement-ugc",
+    "video_title": "Kanishka x L'Oreal \u2014 L'Oreal Star Selection Announcement UGC",
+    "video_description": "L'Or\u00e9al Star campaign selection announcement edited for Kanishka. Features custom gingham framing, subject rotoscoping behind the inbox reveal UI, beat-synced sparkle graphics, and kinetic subtitles.",
+    "tags": [
+      "Creator UGC",
+      "Beauty Campaign",
+      "Rotoscoping",
+      "Motion Graphics"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/kanishka-x-loreal-loreal-star-selection-announcement-ugc.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Kanishka",
+    "client_image": "/companies/kanishka.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/kanishka-x-loreal-loreal-star-selection-announcement-ugc.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:21",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "Photoshop"
+    ]
   },
   {
-    id: "uQC24wdpf64",
-    video_title: "Smoking की आदत बिगाड़ रही है आपकी लाइफ? 🚬 | Stop Performance Anxiety",
-    video_description: "",
-    tags: [],
-    cover_image: "uQC24wdpf64",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/uQC24wdpf64",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:37",
-    software_used: ["Premiere Pro"],
+    "id": "milano-denim-jacket-styling-ugc-ad",
+    "video_title": "Milano \u2014 Denim Jacket Styling UGC Ad",
+    "video_description": "Fast-paced UGC outfit styling reel and Meta ad cut for Milano Boutique's denim jacket collection, blending creator try-on energy with crisp beat cuts and clean product focus.",
+    "tags": [
+      "Fashion UGC",
+      "Meta Ad",
+      "Outfit Transition",
+      "DTC Fashion"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-denim-jacket-styling-ugc-ad.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-denim-jacket-styling-ugc-ad.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads",
+      "Brand Promos"
+    ],
+    "duration": "0:11",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "Ad7lUPpkB-Y",
-    video_title: "क्या आपका Weight आपकी Performance को वीक कर रहा है? 📉 | Control Obesity Now",
-    video_description: "",
-    tags: [],
-    cover_image: "Ad7lUPpkB-Y",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/Ad7lUPpkB-Y",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:56",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-do-traction-devices-work",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Do Traction Devices Work",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-doctor-explainer-do-traction-devices-work.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-doctor-explainer-do-traction-devices-work.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "1:12",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "-kJ8LrZV1T0",
-    video_title: "DiabetesDiabetes की वजह से आई अंदरूनी कमजोरी? 🩸📉 | Overcome Diabetic Neuropathy",
-    video_description: "",
-    tags: [],
-    cover_image: "-kJ8LrZV1T0",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/-kJ8LrZV1T0",
-    project_images: [],
-    category: ["Featured"],
-    duration: "1:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-erection-hardness-scale",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Erection Hardness Scale",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-doctor-explainer-erection-hardness-scale.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-doctor-explainer-erection-hardness-scale.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:28",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "I0uFSudJAkA",
-    video_title: "High Cholesterol है कम Timing की असली वजह! 🚨 | Fix Blood Circulation Now",
-    video_description: "",
-    tags: [],
-    cover_image: "I0uFSudJAkA",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/I0uFSudJAkA",
-    project_images: [],
-    category: ["Featured"],
-    duration: "1:31",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-led-dtc-ad-alcohol-and-performance",
+    "video_title": "RaazMD \u2014 Doctor-Led DTC Ad \u2014 Alcohol & Performance",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-doctor-led-dtc-ad-alcohol-and-performance.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-doctor-led-dtc-ad-alcohol-and-performance.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:44",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "2NafJTYlc5M",
-    video_title: "High Blood Pressure और Performance की दिक्कत? 🩸 | 10,000+ Men Trusted Solution",
-    video_description: "",
-    tags: [],
-    cover_image: "2NafJTYlc5M",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/2NafJTYlc5M",
-    project_images: [],
-    category: ["Featured"],
-    duration: "1:18",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-founder-story-and-testimonial-dtc-ad",
+    "video_title": "RaazMD \u2014 Founder Story & Testimonial DTC Ad",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-founder-story-and-testimonial-dtc-ad.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-founder-story-and-testimonial-dtc-ad.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:38",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "QCb8yJn8D2E",
-    video_title: "Title: Alcohol से हो रही है Performance खराब? 🍷| Get Real Doctor Advice!",
-    video_description: "",
-    tags: [],
-    cover_image: "QCb8yJn8D2E",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/QCb8yJn8D2E",
-    project_images: [],
-    category: ["Featured"],
-    duration: "0:45",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-patient-testimonial-dtc-ad-2-3-years-of-struggle",
+    "video_title": "RaazMD \u2014 Patient Testimonial DTC Ad \u2014 2-3 Years of Struggle",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-patient-testimonial-dtc-ad-2-3-years-of-struggle.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-patient-testimonial-dtc-ad-2-3-years-of-struggle.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "0:22",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "QgXnAqiuBsA",
-    video_title: "Option 03 (Hook-focused & High Click-Through): 32 Year Old Businessman Shared His Timing Journey 🤫",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "QgXnAqiuBsA",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/QgXnAqiuBsA",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:28",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-patient-testimonial-dtc-ad-results-in-10-days",
+    "video_title": "RaazMD \u2014 Patient Testimonial DTC Ad \u2014 Results in 10 Days",
+    "video_description": "Direct-response performance ad creative for RaazMD structured around a thumb-stopping opening hook, dynamic captions, authority framing, and conversion CTA.",
+    "tags": [
+      "DTC Ad",
+      "Direct Response",
+      "Performance Creative",
+      "Meta Ads"
+    ],
+    "cover_image": "/projects/portfolio/ugc-and-dtc-ads/raazmd-patient-testimonial-dtc-ad-results-in-10-days.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ugc-and-dtc-ads/raazmd-patient-testimonial-dtc-ad-results-in-10-days.mp4",
+    "project_images": [],
+    "category": [
+      "UGC & DTC Ads"
+    ],
+    "duration": "1:04",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ]
   },
   {
-    id: "OpByRsA3lbA",
-    video_title: "Option 02 (Hook-focused & High Click-Through) : WhatsApp पर एक 'Hi' भेजा और बदल गई Married Life! 📈",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "OpByRsA3lbA",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/OpByRsA3lbA",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-52-000-man-size-study",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 52,000-Man Size Study",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-52-000-man-size-study.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-52-000-man-size-study.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:35",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "Myb3O9M9Ud8",
-    video_title: "Option 1 (Hook-focused & High Click-Through): WhatsApp के एक 'Hi' ने कैसे बचाया इनका रिश्ता? 🚀",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "Myb3O9M9Ud8",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/Myb3O9M9Ud8",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-are-morning-erections-caused-by-dreams",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Are Morning Erections Caused by Dreams",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-are-morning-erections-caused-by-dreams.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-are-morning-erections-caused-by-dreams.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:32",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "CqJeLRk_6Eg",
-    video_title: "Don't Let Intimacy Issues Ruin Your Relationship! 🛑 | Take The 2-Minute Men's Test",
-    video_description: "👉 Take The 2-Minute Men's Test Now:",
-    tags: ["Metaads"],
-    cover_image: "CqJeLRk_6Eg",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/CqJeLRk_6Eg",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:34",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-can-size-be-increased",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Can Size Be Increased",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-can-size-be-increased.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-can-size-be-increased.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:36",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "BOrbtlQoCAI",
-    video_title: "45 Days में 90% Recovery! 🌟 | Raaz App से मिला परमानेंट आराम",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "BOrbtlQoCAI",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/BOrbtlQoCAI",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:56",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-gym-fit-but-erection-problems",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Gym-Fit but Erection Problems",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-gym-fit-but-erection-problems.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-gym-fit-but-erection-problems.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:38",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "eHye0PyxNkQ",
-    video_title: "सिर्फ 10 Days में दिखने लगा असर! 📈 | Best Timing Solution For Men",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "eHye0PyxNkQ",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/eHye0PyxNkQ",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:05",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-morning-erections-explained",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Morning Erections Explained",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-morning-erections-explained.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-morning-erections-explained.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:31",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "l9lKaV2T1vQ",
-    video_title: "0 से 5 Minute तक कैसे बढ़ी Timing? ⏱️ | Live Proof & Result!Video",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "l9lKaV2T1vQ",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/l9lKaV2T1vQ",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:54",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-morning-erections-stopped-warning-sign",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Morning Erections Stopped, Warning Sign",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-morning-erections-stopped-warning-sign.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-morning-erections-stopped-warning-sign.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:32",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "MMHKvEl1Foo",
-    video_title: "Option 10 (Hook-focused & High Click-Through): Bedroom Moments में दिक्कत? |",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "MMHKvEl1Foo",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/MMHKvEl1Foo",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-peyronies-disease",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Peyronie's Disease",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-peyronies-disease.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-peyronies-disease.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:38",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "1PqnvNM08pU",
-    video_title: "Option 09 (Hook-focused & High Click-Through): Inki Wife को समझ आ गया था कि इलाज जरूरी है! 👍",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "1PqnvNM08pU",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/1PqnvNM08pU",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-premature-ejaculation-causes-long-cut",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Premature Ejaculation Causes (Long Cut)",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-premature-ejaculation-causes-long-cut.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-premature-ejaculation-causes-long-cut.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "1:24",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "ycsDGATJKaU",
-    video_title: "Option 08 (Hook-focused & High Click-Through): क्या बेडरूम प्रॉब्लम्स से आपके रिश्ते टूट रहे हैं? 😟",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "ycsDGATJKaU",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/ycsDGATJKaU",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:26",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-premature-ejaculation-causes-short-cut",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Premature Ejaculation Causes (Short Cut)",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-premature-ejaculation-causes-short-cut.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-premature-ejaculation-causes-short-cut.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:44",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "mxD5sNhhF30",
-    video_title: "Option 07 (Hook-focused & High Click-Through): Early Finish की समस्या का परमानेंट और सही इलाज! ❌",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "mxD5sNhhF30",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/mxD5sNhhF30",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:27",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-size-enlargement-products-are-a-scam",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Size Enlargement Products Are a Scam",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-size-enlargement-products-are-a-scam.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-size-enlargement-products-are-a-scam.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:42",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "qZtOwEOOVKM",
-    video_title: "Curved Penis से Confidence टूट रहा है? ये सुनो",
-    video_description: "A look into how stressing over curvature causes performance anxiety, low confidence, and mental health strain.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "qZtOwEOOVKM",
-    publish_date: "2026-04-21",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/qZtOwEOOVKM",
-    project_images: [],
-    category: ["Featured", "Shorts"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-what-is-a-normal-size",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 What Is a Normal Size",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-what-is-a-normal-size.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-what-is-a-normal-size.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:38",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "CRxEa40onZ8",
-    video_title: "Size छोटा है? Doctor बोले — पहले ये Check करो",
-    video_description: "Breaking down \"small penis anxiety\" and explaining how weight gain and grooming directly alter visual perception.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "CRxEa40onZ8",
-    publish_date: "2026-04-04",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/CRxEa40onZ8",
-    project_images: [],
-    category: ["Featured", "Shorts"],
-    duration: "0:57",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-doctor-explainer-worried-about-size-check-this-first",
+    "video_title": "RaazMD \u2014 Doctor Explainer \u2014 Worried About Size, Check This First",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-doctor-explainer-worried-about-size-check-this-first.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-doctor-explainer-worried-about-size-check-this-first.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:56",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "KIi-GNrS3Wo",
-    video_title: "Indian मर्दों का Size छोटा होता है?",
-    video_description: "Deep-diving into decades of medical data analyzing why perceptions around the physical attributes of Indian men are flawed.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "KIi-GNrS3Wo",
-    publish_date: "2026-04-04",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/KIi-GNrS3Wo",
-    project_images: [],
-    category: ["Featured", "Shorts"],
-    duration: "0:35",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-hard-facts-56-of-men-misjudge-curvature",
+    "video_title": "RaazMD \u2014 Hard Facts \u2014 56% of Men Misjudge Curvature",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-hard-facts-56-of-men-misjudge-curvature.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-hard-facts-56-of-men-misjudge-curvature.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:27",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "9FybW5O9YlY",
-    video_title: "Normal Penis Size कितना है? 100 में से 90 मर्द...",
-    video_description: "Presenting the anatomical bell curve showing where the vast majority of men place regarding measurement metrics.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "9FybW5O9YlY",
-    publish_date: "2026-04-05",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/9FybW5O9YlY",
-    project_images: [],
-    category: ["Featured", "Shorts"],
-    duration: "0:39",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-hard-facts-does-size-matter-for-female-pleasure",
+    "video_title": "RaazMD \u2014 Hard Facts \u2014 Does Size Matter for Female Pleasure",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-hard-facts-does-size-matter-for-female-pleasure.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-hard-facts-does-size-matter-for-female-pleasure.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:30",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "-kY5Sb3gSHE",
-    video_title: "Option 06 (Hook-focused & High Click-Through): Timing की दिक्कत ने शादीशुदा जिंदगी में डाली दरार? 💔",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "-kY5Sb3gSHE",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/-kY5Sb3gSHE",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-hard-facts-night-erections-and-age-study",
+    "video_title": "RaazMD \u2014 Hard Facts \u2014 Night Erections & Age Study",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-hard-facts-night-erections-and-age-study.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-hard-facts-night-erections-and-age-study.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:35",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "s0vDWGJYG84",
-    video_title: "Option 05 (Hook-focused & High Click-Through): चिड़चिड़ापन से लेकर 8 मिनट की टाइमिंग तक का सफर! 📉",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "s0vDWGJYG84",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/s0vDWGJYG84",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:30",
-    software_used: ["Premiere Pro"],
+    "id": "raazmd-hard-facts-porn-vs-reality-size-myths",
+    "video_title": "RaazMD \u2014 Hard Facts \u2014 Porn vs Reality Size Myths",
+    "video_description": "High-retention doctor explainer & educational short crafted for RaazMD with punchy hook pacing, visual diagram callouts, crisp subtitles, and clean sound design.",
+    "tags": [
+      "Social Media",
+      "Doctor Explainer",
+      "Retention Pacing",
+      "Kinetic Captions"
+    ],
+    "cover_image": "/projects/portfolio/social-media/raazmd-hard-facts-porn-vs-reality-size-myths.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/social-media/raazmd-hard-facts-porn-vs-reality-size-myths.mp4",
+    "project_images": [],
+    "category": [
+      "Social Media"
+    ],
+    "duration": "0:26",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "Photoshop"
+    ]
   },
   {
-    id: "Wnzl6GDhkfE",
-    video_title: "Option 04 (Hook-focused & High Click-Through): बेडरूम की दिक्कतों को रिश्ते पर हावी मत होने दें!",
-    video_description: "",
-    tags: ["Metaads"],
-    cover_image: "Wnzl6GDhkfE",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/Wnzl6GDhkfE",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:29",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-06-businessman-testimonial",
+    "video_title": "RaazMD \u2014 32-Year-Old Businessman Story (10 Hook Options)",
+    "video_description": "Large-scale 10-option creative testing matrix pairing chat-UI openers, relatable symptom hooks, and lifestyle storytelling around a businessman's recovery journey.",
+    "tags": [
+      "A/B Testing",
+      "10x Hook Scale",
+      "WhatsApp UI",
+      "Meta Creative"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-01-whatsapp-message-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-01-whatsapp-message-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "0:29",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Option 01 \u00b7 WhatsApp Message Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-01-whatsapp-message-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-01-whatsapp-message-hook.jpg",
+        "duration": "0:29"
+      },
+      {
+        "id": "var-02",
+        "label": "Option 02 \u00b7 WhatsApp Chat Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-02-whatsapp-chat-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-02-whatsapp-chat-hook.jpg",
+        "duration": "0:29"
+      },
+      {
+        "id": "var-03",
+        "label": "Option 03 \u00b7 32-Year-Old Businessman Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-03-32-year-old-businessman-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-03-32-year-old-businessman-hook.jpg",
+        "duration": "0:27"
+      },
+      {
+        "id": "var-04",
+        "label": "Option 04 \u00b7 Bedroom Trouble Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-04-bedroom-trouble-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-04-bedroom-trouble-hook.jpg",
+        "duration": "0:29"
+      },
+      {
+        "id": "var-05",
+        "label": "Option 05 \u00b7 Irritability Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-05-irritability-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-05-irritability-hook.jpg",
+        "duration": "0:29"
+      },
+      {
+        "id": "var-06",
+        "label": "Option 06 \u00b7 Timing Problem Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-06-timing-problem-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-06-timing-problem-hook.jpg",
+        "duration": "0:28"
+      },
+      {
+        "id": "var-07",
+        "label": "Option 07 \u00b7 Early Finish Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-07-early-finish-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-07-early-finish-hook.jpg",
+        "duration": "0:27"
+      },
+      {
+        "id": "var-08",
+        "label": "Option 08 \u00b7 Bedroom Question Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-08-bedroom-question-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-08-bedroom-question-hook.jpg",
+        "duration": "0:26"
+      },
+      {
+        "id": "var-09",
+        "label": "Option 09 \u00b7 Wife Understood Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-09-wife-understood-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-09-wife-understood-hook.jpg",
+        "duration": "0:28"
+      },
+      {
+        "id": "var-10",
+        "label": "Option 10 \u00b7 Bedroom Moments Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-10-bedroom-moments-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-06/raazmd-patient-testimonial-ad-businessman-option-10-bedroom-moments-hook.jpg",
+        "duration": "0:28"
+      }
+    ]
   },
   {
-    id: "BozF8iyaKxA",
-    video_title: "क्यPorn का सबसे बड़ा झूठ | Size Myth Busted | Hard Facts",
-    video_description: "क्यक्या porn देखने से body image और size को लेकर गलत expectations बन सकती हैं? जानें Hard Facts के इस वीडियो में Data और Science के साथ।",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "BozF8iyaKxA",
-    publish_date: "2026-07-16",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/BozF8iyaKxA",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:25",
-    software_used: ["Premiere Pro"],
-    },
-    {
-    id: "mhOkOaGNymw",
-    video_title: "क्या आपका Size सच में छोटा है? 52,000 लोगों की Study का सच जानें",
-    video_description: "क्या आपको भी लगता है कि आपका penis size छोटा है? Research बताती है कि perception और reality में बड़ा फर्क हो सकता है।",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "mhOkOaGNymw",
-    publish_date: "2026-07-15",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/mhOkOaGNymw",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:35",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-02-govt-employee-testimonial",
+    "video_title": "RaazMD \u2014 Govt Employee Patient Testimonial (4 Hook Variants)",
+    "video_description": "Relatable UGC-style patient testimonial edited with four opening hook variations to isolate scroll-stop performance and lead cost across cold Meta audiences:\n\n\u2022 Variant 1: Hesitation Hook\n\u2022 Variant 2: 1 in 4 Men Statistic Hook\n\u2022 Variant 3: Phone Consultation Hook\n\u2022 Variant 4: Timing Hook",
+    "tags": [
+      "A/B Testing",
+      "Patient Testimonial",
+      "Meta Ads",
+      "Hook Testing"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-1-hesitation-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-1-hesitation-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "0:34",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Variant 1 \u00b7 Hesitation Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-1-hesitation-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-1-hesitation-hook.jpg",
+        "duration": "0:34"
+      },
+      {
+        "id": "var-02",
+        "label": "Variant 2 \u00b7 1 in 4 Men Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-2-1-in-4-men-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-2-1-in-4-men-hook.jpg",
+        "duration": "0:33"
+      },
+      {
+        "id": "var-03",
+        "label": "Variant 3 \u00b7 Phone Consultation Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-3-phone-consultation-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-3-phone-consultation-hook.jpg",
+        "duration": "0:33"
+      },
+      {
+        "id": "var-04",
+        "label": "Variant 4 \u00b7 Timing Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-4-timing-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-02/raazmd-patient-testimonial-ad-govt-employee-variant-4-timing-hook.jpg",
+        "duration": "0:35"
+      }
+    ]
   },
   {
-    id: "isDSDvGH520",
-    video_title: "Morning Erections आना बंद हो गए? ये Warning Sign हो सकता है",
-    video_description: "अगर morning erection regularly आना बंद हो जाए, तो इसे ignore न करें। इसके पीछे hormones, sleep, blood flow,  या Vitamin D deficiency जैसी वजहें हो सकती हैं। ",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "isDSDvGH520",
-    publish_date: "2026-07-13",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/isDSDvGH520",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:31",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-04-home-remedy-myth",
+    "video_title": "RaazMD \u2014 Home Remedy Myth Ad (3 Hook Variants)",
+    "video_description": "Three direct-response hook cuts debunking unreliable home remedies ('tel-churan') with kinetic prop callouts, tight captioning, and clear medical authority transitions.",
+    "tags": [
+      "A/B Testing",
+      "Myth Buster",
+      "Direct Response",
+      "DTC Ads"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-1-intimacy-awkwardness-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-1-intimacy-awkwardness-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "1:01",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Variant 1 \u00b7 Intimacy Awkwardness Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-1-intimacy-awkwardness-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-1-intimacy-awkwardness-hook.jpg",
+        "duration": "1:01"
+      },
+      {
+        "id": "var-02",
+        "label": "Variant 2 \u00b7 Partner Suffers Too Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-2-partner-suffers-too-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-2-partner-suffers-too-hook.jpg",
+        "duration": "1:01"
+      },
+      {
+        "id": "var-03",
+        "label": "Variant 3 \u00b7 Bedroom Problem Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-3-bedroom-problem-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-04/raazmd-home-remedy-myth-ad-variant-3-bedroom-problem-hook.jpg",
+        "duration": "1:01"
+      }
+    ]
   },
   {
-    id: "sA-9LmpNw_0",
-    video_title: "Morning Erection क्यों होता है? Body का Night Health Check",
-    video_description: "Morning erection कोई random चीज़ नहीं है। Sleep के दौरान बॉडी blood flow, oxygen और hormones को regulate करती है, जिससे morning erection होता है।",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "sA-9LmpNw_0",
-    publish_date: "2026-07-12",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/sA-9LmpNw_0",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:27",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-07-partner-testimonial",
+    "video_title": "RaazMD \u2014 Partner Perspective Ad (3 Hook Variants)",
+    "video_description": "Three empathy-driven relationship-angle ad hooks exploring partner communication and early resolution, tailored for broad DTC acquisition.",
+    "tags": [
+      "A/B Testing",
+      "Storytelling",
+      "Relationship Angle",
+      "DTC Ads"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-1-is-your-partner-drifting-away-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-1-is-your-partner-drifting-away-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "0:33",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Variant 1 \u00b7 Is Your Partner Drifting Away Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-1-is-your-partner-drifting-away-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-1-is-your-partner-drifting-away-hook.jpg",
+        "duration": "0:33"
+      },
+      {
+        "id": "var-02",
+        "label": "Variant 2 \u00b7 Is Your Partner Troubled Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-2-is-your-partner-troubled-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-2-is-your-partner-troubled-hook.jpg",
+        "duration": "0:32"
+      },
+      {
+        "id": "var-03",
+        "label": "Variant 3 \u00b7 Partner Suffers Too Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-3-partner-suffers-too-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-07/raazmd-partner-testimonial-ad-variant-3-partner-suffers-too-hook.jpg",
+        "duration": "0:34"
+      }
+    ]
   },
   {
-    id: "OrrfGqbfqHc",
-    video_title: "क्या Morning Erection का कारण Sexual Dreams हैं? 🤔Truth Explained",
-    video_description: "क्क्या morning erection सिर्फ intimate dreams की वजह से होता है?  Science क्या कहती है? जानिए इसका असली reason और REM sleep का connection.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "OrrfGqbfqHc",
-    publish_date: "2026-07-11",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/OrrfGqbfqHc",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:32",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-03-rebrand-launch-skits",
+    "video_title": "RaazMD \u2014 Rebrand Launch Campaign (7 Skit & UI Hook Variants)",
+    "video_description": "High-converting skit and UI pop-up creative sprint testing seven completely different narrative openings \u2014 from relatable comedy sketches to smartphone/laptop screen overlays \u2014 for RaazMD's rebrand launch.",
+    "tags": [
+      "A/B Testing",
+      "Skit Ads",
+      "Motion UI",
+      "Rebrand Campaign"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-divorce-skit-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-divorce-skit-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "1:04",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "Photoshop"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Divorce Skit Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-divorce-skit-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-divorce-skit-hook.jpg",
+        "duration": "1:04"
+      },
+      {
+        "id": "var-02",
+        "label": "Laptop Pop-up Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-laptop-pop-up-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-laptop-pop-up-hook.jpg",
+        "duration": "1:04"
+      },
+      {
+        "id": "var-03",
+        "label": "Medical Shop Skit Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-medical-shop-skit-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-medical-shop-skit-hook.jpg",
+        "duration": "1:15"
+      },
+      {
+        "id": "var-04",
+        "label": "Mocked Men Skit Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-mocked-men-skit-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-mocked-men-skit-hook.jpg",
+        "duration": "1:08"
+      },
+      {
+        "id": "var-05",
+        "label": "Pamphlet Door Drop Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-pamphlet-door-drop-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-pamphlet-door-drop-hook.jpg",
+        "duration": "1:05"
+      },
+      {
+        "id": "var-06",
+        "label": "Phone Pop-up Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-phone-pop-up-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-phone-pop-up-hook.jpg",
+        "duration": "1:01"
+      },
+      {
+        "id": "var-07",
+        "label": "Tea Spill Skit Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-03/raazmd-rebrand-launch-ad-tea-spill-skit-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-03/raazmd-rebrand-launch-ad-tea-spill-skit-hook.jpg",
+        "duration": "1:04"
+      }
+    ]
   },
   {
-    id: "g6Vxt49wZPU",
-    video_title: "Morning Erections का सच! | Myths vs Science Explained",
-    video_description: "क्या morning erections सिर्फ sexual arousal की वजह से होते हैं? जानिए इसके पीछे की असली science",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "g6Vxt49wZPU",
-    publish_date: "2026-07-09",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/g6Vxt49wZPU",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:30",
-    software_used: ["Premiere Pro"],
-  },
-   {
-    id: "R3zy7r5xul0",
-    video_title: "Morning Erections गायब हैं? | क्या ये Warning Sign है?",
-    video_description: "अगर morning erections कम हो गई हैं या बिल्कुल बंद हो गई हैं, तो क्या इसका मतलब erectile dysfunction है? जानिए कब ये normal है और कब doctor से मिलना चाहिए।",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "R3zy7r5xul0",
-    publish_date: "2026-07-08",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://www.youtube.com/shorts/R3zy7r5xul0",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:52",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "T6kb4AUGGqg",
-    video_title: "उम्र के साथ Morning Erections कम क्यों होते हैं? | Science Explained",
-    video_description: "A scientific overview of how nocturnal penile tumescence (morning erections) naturally decreases in frequency and intensity with age, as observed in sleep studies.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "T6kb4AUGGqg",
-    publish_date: "2026-05-07",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/T6kb4AUGGqg",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:35",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "BsHrg9OSpgQ",
-    video_title: "Morning Erection: 90 Min रोज़ रात- क्यों?",
-    video_description: "An explanation of nocturnal erections acting as vital oxygen therapy for penile tissues, boosting oxygen levels to maintain tissue health and elasticity.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "BsHrg9OSpgQ",
-    publish_date: "2026-05-05",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/BsHrg9OSpgQ",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:33",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-01-treatment-explainer",
+    "video_title": "RaazMD \u2014 Treatment Explainer Ad (4 Hook Variants)",
+    "video_description": "Direct-response A/B creative test built for Meta ads, comparing four distinct 3-second problem & myth-busting opening hooks connected to a unified explainer body:\n\n\u2022 Variant 1: Bedroom Problem Hook\n\u2022 Variant 2: Bedroom Trouble Hook\n\u2022 Variant 3: Home Remedies Don't Fix Timing Hook\n\u2022 Variant 4: Home Remedies Make It Worse Hook",
+    "tags": [
+      "A/B Testing",
+      "Performance Ad",
+      "Hook Matrix",
+      "DTC Healthcare"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-1-bedroom-problem-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-1-bedroom-problem-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "1:02",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Variant 1 \u00b7 Bedroom Problem Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-1-bedroom-problem-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-1-bedroom-problem-hook.jpg",
+        "duration": "1:02"
+      },
+      {
+        "id": "var-02",
+        "label": "Variant 2 \u00b7 Bedroom Trouble Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-2-bedroom-trouble-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-2-bedroom-trouble-hook.jpg",
+        "duration": "1:02"
+      },
+      {
+        "id": "var-03",
+        "label": "Variant 3 \u00b7 Home Remedies Don't Fix Timing Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-3-home-remedies-dont-fix-timing-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-3-home-remedies-dont-fix-timing-hook.jpg",
+        "duration": "1:05"
+      },
+      {
+        "id": "var-04",
+        "label": "Variant 4 \u00b7 Home Remedies Make It Worse Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-4-home-remedies-make-it-worse-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-01/raazmd-treatment-explainer-ad-variant-4-home-remedies-make-it-worse-hook.jpg",
+        "duration": "1:07"
+      }
+    ]
   },
   {
-    id: "WPpFZ5OMINQ",
-    video_title: "हर रात 4 Erections | Science क्या कहती है?",
-    video_description: "Insights into how morning erections function across all ages sync with REM sleep cycles without requiring sexual thoughts.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "WPpFZ5OMINQ",
-    publish_date: "2026-05-03",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/WPpFZ5OMINQ",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:37",
-    software_used: ["Premiere Pro"],
+    "id": "ab-reel-05-whatsapp-cta-testimonial",
+    "video_title": "RaazMD \u2014 WhatsApp CTA Testimonial (3 Hook Variants)",
+    "video_description": "Three conversion-focused WhatsApp CTA testimonial edits testing emotional storytelling vs stat-led urgency in the opening frame.",
+    "tags": [
+      "A/B Testing",
+      "WhatsApp Funnel",
+      "Testimonial Ad",
+      "Performance Creative"
+    ],
+    "cover_image": "/projects/portfolio/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-1-1-in-4-men-shared-their-story-hook.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "RaazMD",
+    "client_image": "/companies/RaazMD.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-1-1-in-4-men-shared-their-story-hook.mp4",
+    "project_images": [],
+    "category": [
+      "A/B Testing"
+    ],
+    "duration": "0:33",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut"
+    ],
+    "variations": [
+      {
+        "id": "var-01",
+        "label": "Variant 1 \u00b7 1 in 4 Men Shared Their Story Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-1-1-in-4-men-shared-their-story-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-1-1-in-4-men-shared-their-story-hook.jpg",
+        "duration": "0:33"
+      },
+      {
+        "id": "var-02",
+        "label": "Variant 2 \u00b7 1 in 4 Men Found a Fix Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-2-1-in-4-men-found-a-fix-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-2-1-in-4-men-found-a-fix-hook.jpg",
+        "duration": "0:34"
+      },
+      {
+        "id": "var-03",
+        "label": "Variant 3 \u00b7 Bedroom Problem Solved Hook",
+        "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-3-bedroom-problem-solved-hook.mp4",
+        "cover_image": "/projects/portfolio/ab-testing/reel-05/raazmd-patient-testimonial-ad-whatsapp-cta-variant-3-bedroom-problem-solved-hook.jpg",
+        "duration": "0:33"
+      }
+    ]
   },
   {
-    id: "5maln15Dfrk",
-    video_title: "टेढ़ा Penis से Partner Unhappy? Doctor बोले...",
-    video_description: "Addressing misconceptions regarding penile curvature, explaining that it rarely affects intimacy and debunking online pills or correction devices.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "5maln15Dfrk",
-    publish_date: "2026-04-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/5maln15Dfrk",
-    project_images: [],
-    category: ["Featured", "Shorts"],
-    duration: "0:36",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-himalayan-shilajit-origin-story-short",
+    "video_title": "BetterAlt \u2014 Himalayan Shilajit Origin Story Short",
+    "video_description": "High-retention vertical product showcase for BetterAlt, combining origin storytelling, clean 3D/text callouts, rhythm-driven sound design, and sharp DTC pacing.",
+    "tags": [
+      "Product Showcase",
+      "DTC Wellness",
+      "Short-Form",
+      "Sound Design"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-himalayan-shilajit-origin-story-short.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-himalayan-shilajit-origin-story-short.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "0:26",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut"
+    ]
   },
   {
-    id: "977u2dwYd_0",
-    video_title: "Penis पहले Straight था, अब Tedha — Serious है?",
-    video_description: "Clinical clarity on whether a shift or curvature in shape over time is serious, highlighting what symptoms require medical attention.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "977u2dwYd_0",
-    publish_date: "2026-04-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/977u2dwYd_0",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:22",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-shilajit-gummies-product-ad",
+    "video_title": "BetterAlt \u2014 Shilajit Gummies Product Ad",
+    "video_description": "High-retention vertical product showcase for BetterAlt, combining origin storytelling, clean 3D/text callouts, rhythm-driven sound design, and sharp DTC pacing.",
+    "tags": [
+      "Product Showcase",
+      "DTC Wellness",
+      "Short-Form",
+      "Sound Design"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-shilajit-gummies-product-ad.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-shilajit-gummies-product-ad.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "0:16",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut"
+    ]
   },
   {
-    id: "xNDfUooyCqw",
-    video_title: "Peyronie's Disease क्या है? — डरो मत, समझो",
-    video_description: "An explanation of Peyronie's disease, how internal plaque/scar tissue causes bending during an erection, and who it commonly affects.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "xNDfUooyCqw",
-    publish_date: "2026-04-23",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/xNDfUooyCqw",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:38",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-shilajit-podcast-episode-akash-and-masooma",
+    "video_title": "BetterAlt \u2014 Shilajit Podcast Episode \u2014 Akash & Masooma",
+    "video_description": "Long-form wellness podcast & educational feature cut for BetterAlt with multi-cam switching, clean B-roll inserts, subtle lower thirds, and narrative pacing built for watch time.",
+    "tags": [
+      "Podcast Edit",
+      "Wellness",
+      "Product Education",
+      "Storytelling"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-shilajit-podcast-episode-akash-and-masooma.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-shilajit-podcast-episode-akash-and-masooma.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "9:12",
+    "software_used": [
+      "Premiere Pro",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "H9N5jvbmNhI",
-    video_title: "Penis Size की सच्चाई — Doctor ने सब बता दिया",
-    video_description: "Medical facts concerning the average erect length for Indian men, matching it closely against global metrics to clear up internet-born myths.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "H9N5jvbmNhI",
-    publish_date: "2026-04-03",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/H9N5jvbmNhI",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:39",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-shilajit-uk-launch-short-1",
+    "video_title": "BetterAlt \u2014 Shilajit UK Launch Short 1",
+    "video_description": "High-retention vertical product showcase for BetterAlt, combining origin storytelling, clean 3D/text callouts, rhythm-driven sound design, and sharp DTC pacing.",
+    "tags": [
+      "Product Showcase",
+      "DTC Wellness",
+      "Short-Form",
+      "Sound Design"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-shilajit-uk-launch-short-1.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-shilajit-uk-launch-short-1.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "0:46",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut"
+    ]
   },
   {
-    id: "eUR0CIZ2ow0",
-    video_title: "Size छोटा लग रहा है? असली Problem ये हो सकती है",
-    video_description: "Explaining a massive study revealing that anxiety about size often misidentifies an underlying issue with erection firmness or quality.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "eUR0CIZ2ow0",
-    publish_date: "2026-04-03",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/eUR0CIZ2ow0",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:43",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-shilajit-uk-launch-short-2-purity-and-85-minerals",
+    "video_title": "BetterAlt \u2014 Shilajit UK Launch Short 2 \u2014 Purity & 85 Minerals",
+    "video_description": "High-retention vertical product showcase for BetterAlt, combining origin storytelling, clean 3D/text callouts, rhythm-driven sound design, and sharp DTC pacing.",
+    "tags": [
+      "Product Showcase",
+      "DTC Wellness",
+      "Short-Form",
+      "Sound Design"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-shilajit-uk-launch-short-2-purity-and-85-minerals.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-shilajit-uk-launch-short-2-purity-and-85-minerals.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "1:01",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut"
+    ]
   },
   {
-    id: "R9QeTSN-nO8",
-    video_title: "Oil से Size बढ़ेगा? Doctor का सीधा जवाब",
-    video_description: "Differentiating medical reality from promotional claims, explaining that creams or oils only briefly increase surface blood flow but cannot expand physical tissue.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "R9QeTSN-nO8",
-    publish_date: "2026-04-05",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/R9QeTSN-nO8",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:46",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-shilajit-for-digestion-explainer",
+    "video_title": "BetterAlt \u2014 Shilajit for Digestion Explainer",
+    "video_description": "Benefit-led product explainer for BetterAlt pairing scientific wellness clarity with clean motion graphics, ingredient callouts, and studio color grading.",
+    "tags": [
+      "Product Explainer",
+      "Motion Graphics",
+      "Supplement Brand",
+      "Retention Edit"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-shilajit-for-digestion-explainer.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-shilajit-for-digestion-explainer.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "1:47",
+    "software_used": [
+      "Premiere Pro",
+      "After Effects"
+    ]
   },
   {
-    id: "fgqYbtZpkBY",
-    video_title: "Size बढ़ाने वाले Products? सब SCAM है — Doctor Explains",
-    video_description: "Exposing tissue expansion product scams and directing focus toward treating actual erectile dysfunction effectively.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "fgqYbtZpkBY",
-    publish_date: "2026-04-06",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/fgqYbtZpkBY",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:43",
-    software_used: ["Premiere Pro"],
+    "id": "betteralt-wellness-podcast-teaser-reel",
+    "video_title": "BetterAlt \u2014 Wellness Podcast Teaser Reel",
+    "video_description": "Long-form wellness podcast & educational feature cut for BetterAlt with multi-cam switching, clean B-roll inserts, subtle lower thirds, and narrative pacing built for watch time.",
+    "tags": [
+      "Podcast Edit",
+      "Wellness",
+      "Product Education",
+      "Storytelling"
+    ],
+    "cover_image": "/projects/portfolio/product-showcase/betteralt-wellness-podcast-teaser-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "BetterAlt",
+    "client_image": "/companies/betteralt.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/product-showcase/betteralt-wellness-podcast-teaser-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Product Showcase"
+    ],
+    "duration": "0:33",
+    "software_used": [
+      "Premiere Pro",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "G5qRYKkRnWQ",
-    video_title: "Bigger Penis Is Better? सच जानें",
-    video_description: "Explaining anatomical sensitivity facts regarding female pleasure zones and detailing the nerve endings responsible for stimulation.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "G5qRYKkRnWQ",
-    publish_date: "2026-04-07",
-    client_name: "RaazMD",
-    client_image: "/companies/G5qRYKkRnWQ.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/G5qRYKkRnWQ",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:51",
-    software_used: ["Premiere Pro"],
+    "id": "milano-denim-dress-new-arrivals-reel",
+    "video_title": "Milano \u2014 Denim Dress New Arrivals Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-denim-dress-new-arrivals-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-denim-dress-new-arrivals-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:21",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "mdbenYuF7pM",
-    video_title: "Indian Men का Average Size — Doctor-Measured Data",
-    video_description: "Real clinical experiences breaking down how patients confuse performance/erection quality anxiety with sizing issues.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "mdbenYuF7pM",
-    publish_date: "2026-04-08",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/mdbenYuF7pM",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:41",
-    software_used: ["Premiere Pro"],
+    "id": "milano-everyday-shirts-collection-reel",
+    "video_title": "Milano \u2014 Everyday Shirts Collection Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-everyday-shirts-collection-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-everyday-shirts-collection-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:16",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "oMBUNwPHD-w",
-    video_title: "Porn vs Reality — Penis Size का सच क्या है?",
-    video_description: "Dissecting how curated camera angles, lighting, and selective casting set up deeply unrealistic and harmful standard expectations.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "oMBUNwPHD-w",
-    publish_date: "2026-04-09",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/oMBUNwPHD-w",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:45",
-    software_used: ["Premiere Pro"],
+    "id": "milano-graphic-tee-and-skirt-styling-reel",
+    "video_title": "Milano \u2014 Graphic Tee & Skirt Styling Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-graphic-tee-and-skirt-styling-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-graphic-tee-and-skirt-styling-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:25",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "UMzqMhH6vQI",
-    video_title: "Straight Penis कितने मर्दों का होता है? जवाब चौंकाएगा",
-    video_description: "Explaining that curvatures up to 30 or 60 degrees can be completely natural and stable, without impacting physical capability.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "UMzqMhH6vQI",
-    publish_date: "2026-04-18",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/UMzqMhH6vQI",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:28",
-    software_used: ["Premiere Pro"],
+    "id": "milano-leather-pinafore-dress-reel",
+    "video_title": "Milano \u2014 Leather Pinafore Dress Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-leather-pinafore-dress-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-leather-pinafore-dress-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:23",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "EwpM2r4MLWk",
-    video_title: "Penis टेढ़ा दिखता है? 56% मर्द ग़लत समझते हैं",
-    video_description: "Discussing how looking downward creates an unflattering perspective angle, causing more than half of men to overestimate asymmetry.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "EwpM2r4MLWk",
-    publish_date: "2026-04-19",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/EwpM2r4MLWk",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:28",
-    software_used: ["Premiere Pro"],
+    "id": "milano-red-halter-dress-reel",
+    "video_title": "Milano \u2014 Red Halter Dress Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-red-halter-dress-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-red-halter-dress-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:23",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "v3tMii54Pqk",
-    video_title: "Masturbation से Penis टेढ़ा होता है? सच जान लो",
-    video_description: "Debunking a common physiological myth by explaining that normal habits do not cause curvature or structural alignment shifts.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "v3tMii54Pqk",
-    publish_date: "2026-04-20",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/v3tMii54Pqk",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:35",
-    software_used: ["Premiere Pro"],
+    "id": "milano-red-maxi-dress-reel",
+    "video_title": "Milano \u2014 Red Maxi Dress Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-red-maxi-dress-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-red-maxi-dress-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:23",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "2sZcM85ENE8",
-    video_title: "Penis टेढ़ा — कब Normal, कब Doctor ज़रूरी?",
-    video_description: "A definitive guide outlining the baseline differences between natural long-term curvature and sudden shifts that demand professional care.",
-    tags: ["MorningErections", "MensHealth", "HardFacts", "Shorts"],
-    cover_image: "2sZcM85ENE8",
-    publish_date: "2026-04-20",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/2sZcM85ENE8",
-    project_images: [],
-    category: ["Shorts"],
-    duration: "0:50",
-    software_used: ["Premiere Pro"],
+    "id": "milano-red-tracksuit-mirror-try-on-reel",
+    "video_title": "Milano \u2014 Red Tracksuit Mirror Try-On Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-red-tracksuit-mirror-try-on-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-red-tracksuit-mirror-try-on-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:22",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "SmoWNatw9Bw",
-    video_title: "Don't Let Intimacy Issues Ruin Your Relationship! 🛑 | Take The Men's Test (Version 1)",
-    video_description: "इंटीमेसी में आई परेशानियां (Intimacy issues) सिर्फ किसी एक व्यक्ति को प्रभावित नहीं करतीं—পার্টনার भी उतने ही दर्द, तनाव और मानसिक खिंचाव से गुजरता है। बातचीत से कतराना, चीजों को टाल देना...",
-    tags: ["Metaads"],
-    cover_image: "SmoWNatw9Bw",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/SmoWNatw9Bw",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:33",
-    software_used: ["Premiere Pro"],
+    "id": "milano-rhinestone-denim-bomber-jacket-product-film",
+    "video_title": "Milano \u2014 Rhinestone Denim Bomber Jacket Product Film",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-rhinestone-denim-bomber-jacket-product-film.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-rhinestone-denim-bomber-jacket-product-film.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:10",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "1h34IPHmHfA",
-    video_title: "Don't Let Intimacy Issues Ruin Your Relationship! 🛑 | Take The Men's Test (Version 2)",
-    video_description: "इंटीमेसी में आई परेशानियां (Intimacy issues) सिर्फ किसी एक व्यक्ति को प्रभावित नहीं करतीं—पार्टनर भी उतने ही दर्द, तनाव और मानसिक खिंचाव से गुजरता है। बातचीत से कतराना, चीजों का टाल देना...",
-    tags: ["Metaads"],
-    cover_image: "1h34IPHmHfA",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/1h34IPHmHfA",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "0:33",
-    software_used: ["Premiere Pro"],
+    "id": "milano-sequin-gowns-transition-reel",
+    "video_title": "Milano \u2014 Sequin Gowns Transition Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-sequin-gowns-transition-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-sequin-gowns-transition-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:24",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "pAsejwdzgD8",
-    video_title: "\"Chai की नहीं, Timing की बात हो रही है!\" ☕❌ | Real Men's Healthcare",
-    video_description: "क्या आप भी टाइमिंग की दिक्कतों से परेशान हैं और किसी सही इलाज की जगह अजीबोगरीब जड़ी-बूटियों, चूरन, या घरेलू नुस्खों के चक्कर में अपना समय बर्बाद कर रहे हैं? 🛑..",
-    tags: ["Metaads"],
-    cover_image: "pAsejwdzgD8",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/pAsejwdzgD8",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:05",
-    software_used: ["Premiere Pro"],
+    "id": "milano-striped-bodycon-dress-reel",
+    "video_title": "Milano \u2014 Striped Bodycon Dress Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-striped-bodycon-dress-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-striped-bodycon-dress-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:24",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "LDE-8aBPmZQ",
-    video_title: "\"इतने नुस्खों के बाद क्या हकीम जी इलाज कर पाएंगे?\" 🤔 | Local Ad Scams Exposed!",
-    video_description: "क्या आप भी बेडरूम या टाइमिंग की दिक्कतों से परेशान होकर दरवाजों के नीचे मिलने वाले 'हकीमों' के पर्चे (Pamphlets) और उनके दावों के चक्कर में पड़ रहे हैं? 🛑...",
-    tags: ["Metaads"],
-    cover_image: "LDE-8aBPmZQ",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/LDE-8aBPmZQ",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:05",
-    software_used: ["Premiere Pro"],
+    "id": "milano-tiered-ruffle-dresses-reel",
+    "video_title": "Milano \u2014 Tiered Ruffle Dresses Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-tiered-ruffle-dresses-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-tiered-ruffle-dresses-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:27",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "hHTxV7x8JUY",
-    video_title: "Under Pressure From Family & Spouse? 🛑 Men's Performance Issues Explained Safely",
-    video_description: "क्या आपकी शादीशुदा जिंदगी में भी परफॉर्मेंस की दिक्कतों और बेडरूम स्ट्रेस की वजह से दूरियां बढ़ रही हैं? 💔 कभी पार्टनर की तरफ से अलग होने की बातें तो कभी परिवार की तरफ से...",
-    tags: ["Metaads"],
-    cover_image: "hHTxV7x8JUY",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/hHTxV7x8JUY",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:08",
-    software_used: ["Premiere Pro"],
+    "id": "milano-trendy-tops-collection-reel",
+    "video_title": "Milano \u2014 Trendy Tops Collection Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-trendy-tops-collection-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-trendy-tops-collection-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:22",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "RRbF-eej7Ds",
-    video_title: "\"अगले महीने शादी है और डर लग रहा है?\" 😟 | Real Men's Healthcare Solution",
-    video_description: "क्या आपकी भी अगले महीने शादी होने वाली है और आप सुहागरात या परफॉर्मेंस की दिक्कतों को लेकर टेंशन में हैं? 😟 क्या आप भी बिना किसी सही सलाह के मेडिकल शॉप से कोई दवा लेने की सोच रहे हैं? 🛑...",
-    tags: ["Metaads"],
-    cover_image: "RRbF-eej7Ds",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/RRbF-eej7Ds",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:16",
-    software_used: ["Premiere Pro"],
+    "id": "milano-white-skater-dress-new-arrival-reel",
+    "video_title": "Milano \u2014 White Skater Dress New Arrival Reel",
+    "video_description": "Fashion lookbook and new-arrival promo reel for Milano Boutique, featuring beat-matched garment reveals, smooth speed ramps, luxury tonal grading, and mobile-first framing.",
+    "tags": [
+      "Brand Promo",
+      "Fashion Reel",
+      "Lookbook",
+      "Beat Sync"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/milano-white-skater-dress-new-arrival-reel.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Milano Boutique",
+    "client_image": "/companies/milano.jpg",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/milano-white-skater-dress-new-arrival-reel.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:18",
+    "software_used": [
+      "Premiere Pro",
+      "CapCut",
+      "DaVinci Resolve"
+    ]
   },
   {
-    id: "w1I7E0e6wlM",
-    video_title: "\"शीघ्रपतन का इलाज किधर है?\" 🤔 | The Real Science Behind Men's Health",
-    video_description: "क्या आप भी टाइमिंग की दिक्कतों और शीघ्रपतन (Premature Ejaculation) से परेशान हैं, और इसका इलाज ढूंढने के लिए अजीबोगरीब नुस्खे, चूरन या जड़ी-बूटियों के चक्कर में भटक रहे हैं? 🛑...",
-    tags: ["Metaads"],
-    cover_image: "w1I7E0e6wlM",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/w1I7E0e6wlM",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:02",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "a1pAgtxm4ps",
-    video_title: "\"हर नुस्खा ट्राई कर लिया?\" ❌ | Stop Wasting Time On Fake Advertisements!",
-    video_description: "क्या आपने भी टाइमिंग की दिक्कत को ठीक करने के लिए दीवारों और अखबारों में छपे 'बाबाओं' के विज्ञापन देखकर तेल, चूरन, और जड़ी-बूटी सब ट्राई कर लिया? 🛑...",
-    tags: ["Metaads"],
-    cover_image: "a1pAgtxm4ps",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/a1pAgtxm4ps",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:04",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "noYusL8aR1A",
-    video_title: "\"नष्ट हो सकती है आपकी लाइफ\" 💔 | Don't Let Bedroom Problems Ruin Your Relationship!",
-    video_description: "क्या आपकी शादीशुदा जिंदगी में भी बेडरूम प्रॉब्लम्स और परफॉर्मेंस की दिक्कतों की वजह से दूरियां बढ़ रही हैं? 💔 यह सिर्फ आपकी अकेले की समस्या नहीं है—भारत में हर 4 में से 1 मर्द...",
-    tags: ["Metaads"],
-    cover_image: "noYusL8aR1A",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/noYusL8aR1A",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:05",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "cU2djDRNy9g",
-    video_title: "तेल, चूरन, जड़ी-बूटी से बढ़ता है नुकसान? 🛑 | Real Men's Healthcare Solution",
-    video_description: "क्या आप भी तेल, चूरन, और जड़ी-बूटी के चक्कर में पड़कर अपनी बेडरूम प्रॉब्लम्स को और बढ़ा रहे हैं? 🛑 एक बात को गहराई से समझना बेहद ज़रूरी है—हर पुरुष की परेशानी का कारण अलग होता...",
-    tags: ["Metaads"],
-    cover_image: "cU2djDRNy9g",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/cU2djDRNy9g",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:07",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "PftKMfHlfXM",
-    video_title: "तेल, चूरन, जड़ी-बूटी से क्या टाइमिंग की दिक्कत ठीक होगी? 🤔 | The Truth",
-    video_description: "क्या आप भी तेल, चूरन, और जड़ी-बूटी के इस्तेमाल से अपनी टाइमिंग की दिक्कत को ठीक करने की कोशिश कर रहे हैं? 🛑 अगर इन सब से यह परेशानी ठीक हो रही होती, तो डॉक्टर को इतना समझाना नहीं पड़ता!...",
-    tags: ["Metaads"],
-    cover_image: "PftKMfHlfXM",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/PftKMfHlfXM",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:06",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "0xVd76BMKkE",
-    video_title: "नकली चूरन वाले बाबाओं से सावधान! ❌ | Real Men's Healthcare Solution",
-    video_description: "क्या आप भी बेडरूम की दिक्कतों को दूर करने के लिए बाबाओं के नकली चूरन और जड़ी-बूटियों के चक्कर में पड़े हैं? 🛑 हर आदमी की परेशानी की वजह अलग होता है, इसलिए सबका इलाज एक जैसा बिल्कुल नहीं हो सकता!...",
-    tags: ["Metaads"],
-    cover_image: "0xVd76BMKkE",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/0xVd76BMKkE",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:02",
-    software_used: ["Premiere Pro"],
-  },
-  {
-    id: "Mt_1L1S9tB0",
-    video_title: "Stop Wasting Money On \"Baba Ka Churan\"! ❌ | Real Men's Healthcare Solution",
-    video_description: "क्या आप भी टाइमिंग की दिक्कत या बेडरूम प्रॉब्लम्स से परेशान हैं और बाबाओं के चक्कर में फंसकर जड़ी-बूटी tobacco और चूरन ट्राई कर रहे हैं? 🛑 एक बात समझो—हर इंसान की परेशानी का कारण अलग होता...",
-    tags: ["Metaads"],
-    cover_image: "Mt_1L1S9tB0",
-    publish_date: "2026-06-25",
-    client_name: "RaazMD",
-    client_image: "/companies/RaazMD.png",
-    client_feedback: "",
-    video_link: "https://youtube.com/shorts/Mt_1L1S9tB0",
-    project_images: [],
-    category: ["Meta Ads"],
-    duration: "1:02",
-    software_used: ["Premiere Pro"],
-  },
+    "id": "pacific-italian-surfaces-luxury-marble-brand-film",
+    "video_title": "Pacific Italian Surfaces \u2014 Luxury Marble Brand Film",
+    "video_description": "Architectural brand film crafted for Pacific Italian Surfaces, showcasing sculpted luxury marble textures with smooth speed-ramped camera motion, refined typography, and warm atmospheric color grading.",
+    "tags": [
+      "Brand Film",
+      "Luxury Architecture",
+      "Color Grading",
+      "Motion Typography"
+    ],
+    "cover_image": "/projects/portfolio/brand-promos/pacific-italian-surfaces-luxury-marble-brand-film.jpg",
+    "publish_date": "2026-11-28",
+    "client_name": "Pacific Italian Surfaces",
+    "client_image": "/companies/pacific-italian-surfaces.png",
+    "client_feedback": "",
+    "video_link": "https://pub-bb26d1a5a1e14861a106640cff2b318b.r2.dev/brand-promos/pacific-italian-surfaces-luxury-marble-brand-film.mp4",
+    "project_images": [],
+    "category": [
+      "Brand Promos"
+    ],
+    "duration": "0:40",
+    "software_used": [
+      "Premiere Pro",
+      "DaVinci Resolve",
+      "After Effects"
+    ]
+  }
 ];
-
-

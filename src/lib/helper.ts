@@ -12,21 +12,38 @@ export const extractYouTubeId = (url: string): string | null => {
   return match ? match[1] : null;
 };
 
-// Combines the hardcoded projects with anything saved via the "+" admin
-// form, and filters out anything deleted via the trash icon.
+// Returns merged video projects sorted newest-first
 export const getMergedProjects = async (): Promise<VideoProject[]> => {
-  const [extraProjects, hiddenIds] = await Promise.all([
-    getExtraProjects(),
-    getHiddenProjectIds(),
-  ]);
-  const hiddenSet = new Set(hiddenIds);
+  try {
+    const [extraProjects, hiddenIds] = await Promise.all([
+      getExtraProjects().catch(() => []),
+      getHiddenProjectIds().catch(() => []),
+    ]);
+    const hiddenSet = new Set(hiddenIds);
 
-  return [...extraProjects, ...allVideoProjects]
-    .filter((p) => !hiddenSet.has(p.id))
-    .sort(
+    const merged = [...extraProjects, ...allVideoProjects]
+      .filter((p) => !hiddenSet.has(p.id));
+
+    // Deduplicate by ID
+    const seen = new Set<string>();
+    const unique: VideoProject[] = [];
+    for (const p of merged) {
+      if (!seen.has(p.id)) {
+        seen.add(p.id);
+        unique.push(p);
+      }
+    }
+
+    return unique.sort(
       (a, b) =>
         new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
     );
+  } catch {
+    return [...allVideoProjects].sort(
+      (a, b) =>
+        new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
+    );
+  }
 };
 
 export const getCategoriesWithCountFromProjects = (
@@ -38,10 +55,21 @@ export const getCategoriesWithCountFromProjects = (
       categoryCountMap.set(cat, (categoryCountMap.get(cat) || 0) + 1);
     });
   });
-  const sortedCategories = Array.from(categoryCountMap.entries())
-    .map(([category, count]) => ({ category, count }))
-    .sort((a, b) => b.count - a.count);
-  return [{ category: "All", count: projects.length }, ...sortedCategories];
+
+  const orderedCategories = [
+    "Featured",
+    "UGC & DTC Ads",
+    "Social Media",
+    "A/B Testing",
+    "Product Showcase",
+    "Brand Promos",
+  ];
+  const list = orderedCategories.map((category) => ({
+    category,
+    count: categoryCountMap.get(category) || 0,
+  }));
+
+  return list;
 };
 
 // Helper function to get all projects sorted by date (latest first)
@@ -81,47 +109,33 @@ export const getVideoProjectById = (id: string): VideoProject | undefined => {
 
 // Helper function to get all unique categories
 export const getVideoCategories = (): string[] => {
-  const categoriesSet = new Set<string>();
-
-  allVideoProjects.forEach((project) => {
-    project.category.forEach((cat) => categoriesSet.add(cat));
-  });
-
-  return Array.from(categoriesSet);
+  return [
+    "Featured",
+    "UGC & DTC Ads",
+    "Social Media",
+    "A/B Testing",
+    "Product Showcase",
+    "Brand Promos",
+  ];
 };
 
-// Returns categories with project count, sorted descending
+// Returns categories with project count
 export const getVideoCategoriesWithCount = (): {
   category: string;
   count: number;
 }[] => {
-  const categoryCountMap = new Map<string, number>();
-
-  allVideoProjects.forEach((project) => {
-    project.category.forEach((cat) => {
-      categoryCountMap.set(cat, (categoryCountMap.get(cat) || 0) + 1);
-    });
-  });
-
-  const sortedCategories = Array.from(categoryCountMap.entries())
-    .map(([category, count]) => ({ category, count }))
-    .sort((a, b) => b.count - a.count);
-
-  return sortedCategories;
+  return getCategoriesWithCountFromProjects(allVideoProjects);
 };
 
 export const getVideoCategoriesWithCountIncludingAll = (): {
   category: string;
   count: number;
 }[] => {
-  const categoryCounts = getVideoCategoriesWithCount();
-  const total = allVideoProjects.length;
-
-  return [{ category: "All", count: total }, ...categoryCounts];
+  return getCategoriesWithCountFromProjects(allVideoProjects);
 };
 
 export function getFeaturedProjects(limit = 6): VideoProject[] {
-  return getAllVideoProjects().slice(0, limit);
+  return allVideoProjects.filter(p => p.category.includes("Featured")).slice(0, limit);
 }
 
 export function getClients(): Client[] {
@@ -131,6 +145,11 @@ export function getClients(): Client[] {
 // Helper function to get the proper embed link
 export const getYouTubeEmbedUrl = (url: string): string | null => {
   if (!url) return null;
+
+  // Direct MP4 or local path
+  if (url.startsWith("/") || url.endsWith(".mp4")) {
+    return url;
+  }
 
   // Handle Shorts
   if (url.includes("youtube.com/shorts/")) {
@@ -143,21 +162,4 @@ export const getYouTubeEmbedUrl = (url: string): string | null => {
     /(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|.+\?v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
   );
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
-};
-
-// Legacy support - keep the old structure for backward compatibility if needed
-export const videoProjectsData = {
-  "Talking Head": allVideoProjects.filter((p) =>
-    p.category.includes("Talking Head")
-  ),
-  Shorts: allVideoProjects.filter((p) => p.category.includes("Shorts")),
-  Promo: allVideoProjects.filter((p) => p.category.includes("Promo")),
-  Documentary: allVideoProjects.filter((p) =>
-    p.category.includes("Documentary")
-  ),
-  Explainer: allVideoProjects.filter((p) => p.category.includes("Explainer")),
-  "Motion Graphics": allVideoProjects.filter((p) =>
-    p.category.includes("Motion Graphics")
-  ),
-  Animation: allVideoProjects.filter((p) => p.category.includes("Animation")),
 };

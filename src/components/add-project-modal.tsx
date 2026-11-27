@@ -14,7 +14,14 @@ import {
   clearStoredAdminPassword,
 } from "@/lib/admin-session";
 
-const CATEGORY_OPTIONS = ["Featured", "Shorts", "Meta Ads"];
+const CATEGORY_OPTIONS = [
+  "Featured",
+  "UGC & DTC Ads",
+  "Social Media",
+  "A/B Testing",
+  "Product Showcase",
+  "Brand Promos",
+];
 const SOFTWARE_OPTIONS = [
   "Premiere Pro",
   "After Effects",

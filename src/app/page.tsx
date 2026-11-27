@@ -9,8 +9,8 @@ import {
 } from "@/lib/helper";
 
 export default async function HomePage() {
-  // Fetch data on the server
-  const allProjects = await getMergedProjects(); // We need all projects initially for the grid to filter client-side
+  // Fetch all local video projects on the server
+  const allProjects = await getMergedProjects();
   const categories = getCategoriesWithCountFromProjects(allProjects);
 
   return (
@@ -21,24 +21,26 @@ export default async function HomePage() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1380px] mx-auto">
           <div className="text-center mb-16 relative">
             {/* Spotlight Effect behind title */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
 
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight relative z-10">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-white via-blue-100 to-gray-400 bg-clip-text text-transparent">
-                My Video Projects
+                Selected Work
               </span>
             </h2>
             <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-              From smooth transitions to precise audio syncing and dynamic
-              animations — I focus on making your content not just polished, but
-              <span className="text-blue-400 font-medium"> powerful</span>.
+              Selected edits across <span className="text-white font-medium">UGC &amp; DTC Ads</span>,{" "}
+              <span className="text-white font-medium">Social Media</span>,{" "}
+              <span className="text-white font-medium">A/B Testing</span>,{" "}
+              <span className="text-white font-medium">Product Showcase</span>, and{" "}
+              <span className="text-white font-medium">Brand Promos</span>.
             </p>
           </div>
 
-          <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading projects...</div>}>
+          <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading videos...</div>}>
             <ProjectGrid initialCategories={categories} initialProjects={allProjects} />
           </Suspense>
         </div>
@@ -53,7 +55,7 @@ export default async function HomePage() {
               What I Can Do <span className="text-blue-500">for You</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              If you're looking for someone who blends creativity with technical
+              If you&apos;re looking for someone who blends creativity with technical
               skill, communicates clearly, and truly cares about results.
             </p>
           </div>
@@ -61,49 +63,28 @@ export default async function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "YouTube Editing",
-                description: "Engaging edits optimized for retention with perfect pacing.",
+                title: "YouTube & Shorts Editing",
+                description: "Engaging edits optimized for retention with perfect pacing and retention hooks.",
                 icon: "🎬",
               },
               {
-                title: "Course Content",
-                description: "Clear, educational content with professional polish.",
-                icon: "📚",
+                title: "DTC & Performance Ads",
+                description: "High-converting UGC ads, hook-driven testimonials, and kinetic typography.",
+                icon: "📈",
               },
               {
-                title: "Motion Graphics",
-                description: "Eye-catching animations that enhance your storytelling.",
+                title: "Luxury Brand Promos",
+                description: "Cinematic boutique lookbooks, fashion edits, beat-synced rhythm and color grade.",
                 icon: "✨",
               },
-              {
-                title: "Color Grading",
-                description: "Cinematic looks that give your videos a premium feel.",
-                icon: "🎨",
-              },
-              {
-                title: "Logo Animation",
-                description: "Professional branding elements that stand out.",
-                icon: "🏷️",
-              },
-              {
-                title: "Audio Engineering",
-                description: "Crystal clear audio mix with noise reduction.",
-                icon: "🎵",
-              },
-            ].map((service, index) => (
-              <div key={service.title} className="h-full">
-                <GlassmorphismCard className="p-8 h-full flex flex-col items-center text-center group hover:bg-white/[0.04] hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300">
-                  <div className="text-5xl mb-6 bg-white/5 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 border border-white/5">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </GlassmorphismCard>
-              </div>
+            ].map((skill, index) => (
+              <GlassmorphismCard key={index} className="p-6">
+                <div className="text-4xl mb-4">{skill.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {skill.title}
+                </h3>
+                <p className="text-gray-400">{skill.description}</p>
+              </GlassmorphismCard>
             ))}
           </div>
         </div>
