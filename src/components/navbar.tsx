@@ -63,19 +63,16 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-[100] flex justify-center transition-all duration-300 ${
-        scrolled ? "pt-4 pb-0" : "pt-5 pb-0"
+        scrolled || isOpen
+          ? "bg-[#050814]/95 backdrop-blur-2xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.65)]"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div
         className={`
-          flex flex-col items-center
-          px-6 sm:px-8 py-3
-          transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)] border
-          ${
-            scrolled || isOpen
-              ? "w-[95%] max-w-5xl rounded-3xl backdrop-blur-xl md:backdrop-blur-3xl bg-white/5 border border-white/10 shadow-2xl"
-              : "w-full max-w-7xl bg-transparent border-transparent"
-          }
+          w-full max-w-7xl mx-auto flex flex-col items-center
+          px-6 sm:px-8 transition-all duration-300
+          ${scrolled || isOpen ? "py-3" : "py-4"}
         `}
       >
         <div className="w-full flex items-center justify-between">
