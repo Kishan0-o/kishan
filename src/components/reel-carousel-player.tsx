@@ -333,7 +333,11 @@ export default function ReelCarouselPlayer({
           const isLocal =
             item.video_link.startsWith("/") || item.video_link.endsWith(".mp4");
           const isActiveSlide = idx === activeIndex;
+          const isNearSlide = Math.abs(idx - activeIndex) <= 1;
           const slideStarted = Boolean(startedSlides[idx]);
+          const shouldMountVideo =
+            isLocal &&
+            (slideStarted || (variant === "detail" && isActiveSlide));
           const fitClass = landscapeSlides[idx] ? "object-contain" : "object-cover";
 
           return (
@@ -341,39 +345,42 @@ export default function ReelCarouselPlayer({
               key={item.id || idx}
               className="relative w-full h-full shrink-0 overflow-hidden bg-black"
             >
-              <Image
-                src={thumbSrc}
-                alt={`${title}${item.label ? ` — ${item.label}` : ""}`}
-                fill
-                draggable={false}
-                onLoad={(e) => {
-                  const img = e.currentTarget;
-                  if (img.naturalWidth > img.naturalHeight) {
-                    setLandscapeSlides((prev) => (prev[idx] ? prev : { ...prev, [idx]: true }));
+              {isNearSlide && (
+                <Image
+                  src={thumbSrc}
+                  alt={`${title}${item.label ? ` — ${item.label}` : ""}`}
+                  fill
+                  draggable={false}
+                  onLoad={(e) => {
+                    const img = e.currentTarget;
+                    if (img.naturalWidth > img.naturalHeight) {
+                      setLandscapeSlides((prev) => (prev[idx] ? prev : { ...prev, [idx]: true }));
+                    }
+                  }}
+                  className={`${fitClass} pointer-events-none`}
+                  sizes={
+                    variant === "detail"
+                      ? "(max-width: 768px) 100vw, 448px"
+                      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   }
-                }}
-                className={`${fitClass} pointer-events-none`}
-                sizes={
-                  variant === "detail"
-                    ? "(max-width: 768px) 100vw, 448px"
-                    : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                }
-              />
+                />
+              )}
 
-              {isLocal ? (
+              {shouldMountVideo ? (
                 <video
                   ref={(el) => {
                     videoRefs.current[idx] = el;
                   }}
                   src={item.video_link}
                   poster={thumbSrc}
+                  autoPlay={isActiveSlide && isPlaying}
                   loop
                   playsInline
                   muted={isMuted}
                   controlsList="nodownload noplaybackrate"
                   disablePictureInPicture
                   onContextMenu={(e) => e.preventDefault()}
-                  preload="metadata"
+                  preload="auto"
                   onTimeUpdate={(e) => {
                     if (!isActiveSlide) return;
                     const v = e.currentTarget;
@@ -400,10 +407,12 @@ export default function ReelCarouselPlayer({
                     }
                   }}
                   className={`absolute inset-0 w-full h-full ${fitClass} ${
-                    slideStarted && isActiveSlide ? "opacity-100" : "opacity-0"
+                    (slideStarted || variant === "detail") && isActiveSlide
+                      ? "opacity-100"
+                      : "opacity-0"
                   }`}
                 />
-              ) : (
+              ) : !isLocal ? (
                 isActiveSlide &&
                 isPlaying && (
                   <iframe
@@ -414,7 +423,7 @@ export default function ReelCarouselPlayer({
                     className="absolute inset-0 w-full h-full border-0 z-10"
                   />
                 )
-              )}
+              ) : null}
             </div>
           );
         })}

@@ -38,45 +38,62 @@ export default function MouseMoveEffect() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    // 2. Mouse Move Handler (Only adding if not mobile to save resources)
-    const handleMouseMove = (event: MouseEvent) => {
-      targetPos.current = {
-        x: event.clientX,
-        y: event.clientY
-      };
-    };
+    let running = false;
 
-    if (!isMobile) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
-
-    // 3. Animation Loop
     const animate = () => {
-      // Only animate if refs are available
-      if (!layer1Ref.current || !layer2Ref.current) return;
+      if (!layer1Ref.current || !layer2Ref.current) {
+        running = false;
+        return;
+      }
 
-      // Smooth damping
       const ease1 = 0.08;
       const ease2 = 0.04;
 
-      currentPos1.current.x += (targetPos.current.x - currentPos1.current.x) * ease1;
-      currentPos1.current.y += (targetPos.current.y - currentPos1.current.y) * ease1;
+      const dx1 = targetPos.current.x - currentPos1.current.x;
+      const dy1 = targetPos.current.y - currentPos1.current.y;
+      const dx2 = targetPos.current.x - currentPos2.current.x;
+      const dy2 = targetPos.current.y - currentPos2.current.y;
 
-      currentPos2.current.x += (targetPos.current.x - currentPos2.current.x) * ease2;
-      currentPos2.current.y += (targetPos.current.y - currentPos2.current.y) * ease2;
+      currentPos1.current.x += dx1 * ease1;
+      currentPos1.current.y += dy1 * ease1;
+      currentPos2.current.x += dx2 * ease2;
+      currentPos2.current.y += dy2 * ease2;
 
-      // DIRECT DOM UPDATE (No React Re-renders)
-      const p1 = currentPos1.current;
-      const p2 = currentPos2.current;
+      layer1Ref.current.style.transform = `translate3d(${currentPos1.current.x - 400}px, ${currentPos1.current.y - 400}px, 0)`;
+      layer2Ref.current.style.transform = `translate3d(${currentPos2.current.x - 300}px, ${currentPos2.current.y - 300}px, 0)`;
 
-      layer1Ref.current.style.background = `radial-gradient(800px circle at ${p1.x}px ${p1.y}px, rgba(29, 78, 216, 0.12), transparent 60%)`;
-      layer2Ref.current.style.background = `radial-gradient(600px circle at ${p2.x}px ${p2.y}px, rgba(147, 51, 234, 0.08), transparent 60%)`;
+      // Stop rAF loop once both layers have settled near the cursor
+      if (
+        Math.abs(dx1) < 0.5 &&
+        Math.abs(dy1) < 0.5 &&
+        Math.abs(dx2) < 0.5 &&
+        Math.abs(dy2) < 0.5
+      ) {
+        running = false;
+        return;
+      }
 
       requestRef.current = requestAnimationFrame(animate);
     };
 
+    const startAnimate = () => {
+      if (!running && !isMobile) {
+        running = true;
+        requestRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    const handleMouseMove = (event: MouseEvent) => {
+      targetPos.current = {
+        x: event.clientX,
+        y: event.clientY,
+      };
+      startAnimate();
+    };
+
     if (!isMobile) {
-      requestRef.current = requestAnimationFrame(animate);
+      window.addEventListener("mousemove", handleMouseMove, { passive: true });
+      startAnimate();
     }
 
     return () => {
@@ -90,8 +107,8 @@ export default function MouseMoveEffect() {
   if (isMobile) {
     return (
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-blue-900/10 blur-[80px] animate-pulse-slow" />
-        <div className="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] rounded-full bg-purple-900/10 blur-[80px] animate-pulse-slow delay-1000" />
+        <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-blue-900/10 blur-[60px]" />
+        <div className="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] rounded-full bg-purple-900/10 blur-[60px]" />
       </div>
     );
   }
@@ -106,16 +123,22 @@ export default function MouseMoveEffect() {
         }}
       />
 
-      {/* Layer 1 */}
+      {/* Layer 1 (GPU transform-only, zero background repaints) */}
       <div
         ref={layer1Ref}
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-1000 ease-out will-change-[background]"
+        className="pointer-events-none fixed top-0 left-0 w-[800px] h-[800px] z-0 will-change-transform"
+        style={{
+          background: 'radial-gradient(circle, rgba(29, 78, 216, 0.12) 0%, transparent 60%)'
+        }}
       />
 
-      {/* Layer 2 */}
+      {/* Layer 2 (GPU transform-only, zero background repaints) */}
       <div
         ref={layer2Ref}
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-1000 ease-out will-change-[background]"
+        className="pointer-events-none fixed top-0 left-0 w-[600px] h-[600px] z-0 will-change-transform"
+        style={{
+          background: 'radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 60%)'
+        }}
       />
     </>
   );

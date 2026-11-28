@@ -24,9 +24,9 @@ export default function Hero() {
         <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
             {/* Background Ambience - Deepened and refined */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-blue-900/15 rounded-[100%] blur-[120px] animate-pulse-slow" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[600px] bg-purple-900/10 rounded-full blur-[120px]" />
-                <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[120px]" />
+                <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[700px] bg-blue-900/15 rounded-[100%] blur-[80px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[700px] h-[500px] bg-purple-900/10 rounded-full blur-[80px]" />
+                <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-indigo-900/10 rounded-full blur-[80px]" />
             </div>
 
             <div className="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto w-full">
@@ -39,11 +39,11 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-xs sm:text-sm font-medium text-blue-300 tracking-[0.2em] shadow-[0_0_30px_rgba(59,130,246,0.15)] uppercase">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2 animate-pulse" />
-                        Available for Hire
+                        Video Editor — Available for Hire
                     </div>
                 </m.div>
 
-                {/* Main Title - Updated to VIDEO EDITOR with signature premium tracking */}
+                {/* Main Title */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-8 leading-[0.9] w-full flex flex-col items-center">
                     <m.span
                         initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
@@ -51,7 +51,7 @@ export default function Hero() {
                         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.1 }}
                         className="block w-full bg-gradient-to-b from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-sm pb-2"
                     >
-                        VIDEO
+                        KISHAN
                     </m.span>
                     <m.span
                         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
@@ -59,7 +59,7 @@ export default function Hero() {
                         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.3 }}
                         className="block w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 pb-4 filter drop-shadow-[0_0_30px_rgba(59,130,246,0.25)]"
                     >
-                        EDITOR
+                        KUMAR
                     </m.span>
                 </h1>
 

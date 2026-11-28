@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { m, AnimatePresence } from "framer-motion";
@@ -46,27 +46,59 @@ const socialLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [addProjectOpen, setAddProjectOpen] = useState(false);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentY = window.scrollY;
+      setScrolled(currentY > 20);
+
+      // Always show at the very top of the page or while menu/modal is open
+      if (currentY <= 80 || isOpen || addProjectOpen) {
+        setIsHidden(false);
+        lastScrollY.current = currentY;
+        return;
+      }
+
+      const delta = currentY - lastScrollY.current;
+      if (delta > 10) {
+        // Scrolling down -> smoothly hide navbar so it never covers video cards
+        setIsHidden(true);
+        lastScrollY.current = currentY;
+      } else if (delta < -10) {
+        // Scrolling up -> smoothly reveal glossy navbar
+        setIsHidden(false);
+        lastScrollY.current = currentY;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    const handleReelPlay = () => {
+      if (!isOpen && !addProjectOpen && window.scrollY > 80) {
+        setIsHidden(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("kishan-reel-play", handleReelPlay);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("kishan-reel-play", handleReelPlay);
+    };
+  }, [isOpen, addProjectOpen]);
 
   return (
     <m.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-[100] flex justify-center transition-all duration-300 ${
-        scrolled || isOpen
-          ? "pt-4 pb-3 bg-gradient-to-b from-[#020817] via-[#020817]/80 to-transparent"
-          : "pt-5 pb-0"
-      }`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: isHidden ? -110 : 0, opacity: isHidden ? 0 : 1 }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 left-0 right-0 z-[100] flex justify-center ${
+        isHidden ? "pointer-events-none" : "pointer-events-auto"
+      } ${scrolled ? "pt-4 pb-0" : "pt-5 pb-0"}`}
     >
       <div
         className={`
@@ -75,7 +107,7 @@ export default function Navbar() {
           transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)] border
           ${
             scrolled || isOpen
-              ? "w-[95%] max-w-5xl rounded-3xl backdrop-blur-2xl bg-[#070d1a]/92 border border-white/15 shadow-[0_10px_35px_rgba(0,0,0,0.7)]"
+              ? "w-[95%] max-w-5xl rounded-3xl backdrop-blur-xl md:backdrop-blur-3xl bg-white/5 border border-white/10 shadow-2xl"
               : "w-full max-w-7xl bg-transparent border-transparent"
           }
         `}
